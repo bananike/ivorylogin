@@ -1,0 +1,52 @@
+@font-face {
+  font-family: mgothic;
+  src: url("../fonts/mgothic010.ttf");
+  font-weight: 100;
+  font-style: normal; }
+@font-face {
+  font-family: mgothic;
+  src: url("../fonts/mgothic020.ttf");
+  font-weight: 200;
+  font-style: normal; }
+@font-face {
+  font-family: mgothic;
+  src: url("../fonts/mgothic030.ttf");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: mgothic;
+  src: url("../fonts/mgothic040.ttf");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: mgothic;
+  src: url("../fonts/mgothic050.ttf");
+  font-weight: 500;
+  font-style: normal; }
+@font-face {
+  font-family: mgothic;
+  src: url("../fonts/mgothic060.ttf");
+  font-weight: 600;
+  font-style: normal; }
+@font-face {
+  font-family: mgothic;
+  src: url("../fonts/mgothic070.ttf");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: mgothic;
+  src: url("../fonts/mgothic080.ttf");
+  font-weight: 800;
+  font-style: normal; }
+@font-face {
+  font-family: mgothic;
+  src: url("../fonts/mgothic090.ttf");
+  font-weight: 900;
+  font-style: normal; }
+@font-face {
+  font-family: mgothic;
+  src: url("../fonts/mgothic100.ttf");
+  font-weight: 1000;
+  font-style: normal; }
+
+/*# sourceMappingURL=font.css.map */

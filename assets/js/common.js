@@ -1,6 +1,5 @@
 $(document).ready(function () {
-    console.log('ready');
-    activeInputDeleteBtn();
+    activeInputBtn();
     deleteInputValue();
     showPassword();
 
@@ -24,10 +23,10 @@ function deleteInputValue() {
     });
 }
 
-// 002. 인풋 텍스트 제거버튼 활성화
-function activeInputDeleteBtn() {
+// 002. 인풋 텍스트 버튼 활성화
+function activeInputBtn() {
     $(document).on('keyup', '.form_input', function () {
-        var btn = $(this).siblings('.delete');
+        var btn = $(this).siblings('.input_icon');
         if ($(this).val().trim() != '') {
             btn.css({
                 display: 'block',

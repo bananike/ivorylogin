@@ -1,0 +1,56 @@
+@import 'variable';
+@import 'font';
+@import 'common';
+@import 'layout';
+
+.container.sub {
+    background: url('#{$base_url}bg_sub.png') no-repeat 100%;
+    background-size: cover;
+    padding-bottom: fn_calc($v: 40);
+}
+
+.sub_header {
+    position: relative;
+    width: 100%;
+    padding: fn_calc($v: 50) fn_calc($v: 40) fn_calc($v: 32);
+
+    a {
+        display: block;
+        position: relative;
+        width: fn_calc($v: 20);
+        height: fn_calc($v: 28);
+        img {
+            @include objectfit;
+        }
+    }
+}
+.sub_wrapper {
+    margin: 0 fn_calc($v: 40);
+    padding: fn_calc($v: 60) fn_calc($v: 45);
+    border-radius: fn_calc($v: 30);
+    background-color: $color_light;
+
+    &.regist_box {
+        @import 'regist_box';
+    }
+}
+
+@media (min-width: $media_base) {
+    .container {
+        padding-bottom: 40px;
+    }
+
+    .sub_header {
+        padding: 50px 40px 32px;
+
+        a {
+            width: 20px;
+            height: 28px;
+        }
+    }
+    .sub_wrapper {
+        margin: 0 40px;
+        padding: 60px 45px;
+        border-radius: 30px;
+    }
+}

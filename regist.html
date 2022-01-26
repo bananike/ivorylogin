@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        />
+
+        <!-- css -->
+        <link rel="stylesheet" href="assets/css/font.css" />
+        <link rel="stylesheet" href="assets/css/regist.css" />
+        <link rel="stylesheet" href="assets/css/common_ui.css" />
+
+        <title>Regist</title>
+    </head>
+    <body>
+        <div class="container sub">
+            <!-- sub header -->
+            <div class="sub_header">
+                <a href="/">
+                    <img src="assets/images/left_black.svg" alt="뒤로가기" />
+                </a>
+            </div>
+            <!-- sub header -->
+
+            <!-- sub wrapper -->
+            <div class="sub_wrapper regist_box">
+                <h2>회원가입</h2>
+
+                <!-- input group -->
+                <div class="input_box">
+                    <div class="form_group">
+                        <label for="registId">이메일</label>
+                        <input
+                            class="form_input regist_input"
+                            placeholder="이메일 주소를 입력해주세요."
+                            type="email"
+                            name="registId"
+                            id="registId"
+                        />
+                        <span></span>
+                        <button type="button" class="input_icon delete">
+                            <img
+                                src="assets/images/delete_black.svg"
+                                alt="입력값 삭제"
+                            />
+                        </button>
+                        <div class="error_message"></div>
+                    </div>
+                    <div class="form_group">
+                        <label for="registPassword">비밀번호</label>
+                        <input
+                            class="form_input regist_input"
+                            placeholder="비밀번호를 입력해주세요."
+                            type="password"
+                            name="registPassword"
+                            id="registPassword"
+                        />
+                        <span></span>
+                        <button
+                            type="button"
+                            class="input_icon show_password show"
+                        >
+                            <img
+                                class="show"
+                                src="assets/images/show_password.svg"
+                                alt="비밀번호 보이기"
+                            />
+                            <img
+                                class="hide"
+                                src="assets/images/hide_password.svg"
+                                alt="비밀번호 감추기"
+                            />
+                        </button>
+                        <div class="error_message"></div>
+                    </div>
+                    <div class="form_group">
+                        <label for="registPasswordConfirm">비밀번호 확인</label>
+                        <input
+                            class="form_input regist_input"
+                            placeholder="위와 동일한 비밀번호를 입력해주세요."
+                            type="password"
+                            name="registPasswordConfirm"
+                            id="registPasswordConfirm"
+                        />
+                        <span></span>
+                        <button
+                            type="button"
+                            class="input_icon show_password show"
+                        >
+                            <img
+                                class="show"
+                                src="assets/images/show_password.svg"
+                                alt="비밀번호 보이기"
+                            />
+                            <img
+                                class="hide"
+                                src="assets/images/hide_password.svg"
+                                alt="비밀번호 감추기"
+                            />
+                        </button>
+                        <div class="error_message"></div>
+                    </div>
+                </div>
+                <!-- input group -->
+            </div>
+            <!-- sub wrapper -->
+        </div>
+
+        <!-- jquery -->
+        <script type="text/javascript" src="assets/js/jQuery.js"></script>
+
+        <!-- alert -->
+        <script type="text/javascript" src="assets/js/common_ui.js"></script>
+        <!-- common -->
+        <script type="text/javascript" src="assets/js/common.js"></script>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+@import 'input_box';
+
+h2 {
+    font-weight: 700;
+    font-size: fn_calc($v: 40);
+    line-height: fn_calc($v: 55);
+    letter-spacing: fn_calc($v: -2.4);
+}
+
+.input_box {
+    margin-top: fn_calc($v: 60);
+
+    .form_group:not(:first-child) {
+        margin-top: fn_calc($v: 50);
+    }
+}

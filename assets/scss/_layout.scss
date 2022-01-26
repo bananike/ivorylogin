@@ -3,36 +3,33 @@ $bgs: ('login', 'sub', 'complete');
 
 .container {
     max-width: $media_base;
-    mix-blend-mode: multiply;
+    // mix-blend-mode: multiply;
     margin: 0 auto;
-
-    @each $bg in $bgs {
-        &.#{$bg} {
-            background: url('#{$base_url}bg_#{$bg}.png') no-repeat 100%;
-            background-size: cover;
-        }
-    }
-}
-
-.login_wrapper {
-    padding: fn_calc($v: 158) fn_calc($v: 60) fn_calc($v: 70);
-    width: fn_calc($v: 553);
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
-    @import 'login_box';
-    @import 'btn_box_login';
-    @import 'find_box';
 }
 
 @media (min-width: $media_base) {
+    .container {
+        &:not(.login) {
+            padding-bottom: 40px;
+        }
+    }
     .login_wrapper {
         padding: 158px 60px 70px;
         width: 553px;
+    }
+
+    .sub_header {
+        padding: 50px 40px 32px;
+
+        a {
+            width: 20px;
+            height: 28px;
+        }
+    }
+    .sub_wrapper {
+        margin: 0 40px;
+        padding: 60px 45px;
+        border-radius: 30px;
     }
 }
