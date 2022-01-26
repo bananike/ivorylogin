@@ -2,7 +2,8 @@
 
 body {
     &.popup_on,
-    &.alert_on {
+    &.alert_on,
+    &.modal_on {
         overflow: hidden;
     }
 }

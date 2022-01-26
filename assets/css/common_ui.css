@@ -39,7 +39,7 @@
     transform: translateY(0); }
   100% {
     transform: translateY(100%); } }
-body.popup_on, body.alert_on {
+body.popup_on, body.alert_on, body.modal_on {
   overflow: hidden; }
 
 .alert {

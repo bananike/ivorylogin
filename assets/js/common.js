@@ -244,19 +244,22 @@ function onReadyPopup() {
 // 010. 본인인증 모달팝업
 function onCheckDuplication() {
     var modal = $('#authDuplication');
+    var body = $('body');
     modal.css('display', 'flex');
-
+    body.addClass('modal_on');
     closeCheckDuplication();
 }
 
 // 011. 본인인증 모달 닫기
 function closeCheckDuplication() {
     var modal = $('#authDuplication');
+    var body = $('body');
     $(document).on('click', '#authDuplication .result_close', function () {
         modal.addClass('closing');
         setTimeout(function () {
             modal.css('display', 'none');
             modal.removeClass('closing');
+            body.removeClass('modal_on');
         }, 300);
     });
 }
