@@ -5,9 +5,9 @@ $(document).ready(function () {
     showPassword();
 
     callAlert({
-        title: '타이틀',
-        content: 'ㄴ아러닝러',
-        btn: 'ㅁㄴㅇㅁㄴㅇ',
+        title: '테스트용 alert',
+        content: '페이지가 열리면 테스트용 alert이 바로 떠버린다',
+        btn: '확인',
     });
 });
 

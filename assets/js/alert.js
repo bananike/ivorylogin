@@ -15,6 +15,7 @@ function callAlert(value) {
     body.find('.container').append(alert);
 }
 
+// 알럿 컨펌 버튼
 $(document).on('click', '.alert_conform', function () {
     console.log('asdasdsd');
     var body = $('body');
