@@ -349,6 +349,41 @@ img {
     border-top: 1px solid #000;
     border-bottom: 1px solid #000; }
 
+@media (min-width: 640px) {
+  .result_modal {
+    padding: 40px; }
+    .result_modal .result_close {
+      width: 30px;
+      height: 30px; }
+    .result_modal h2 {
+      font-size: 40px;
+      line-height: 55px;
+      letter-spacing: -2.4px;
+      margin-top: 80px; }
+
+  .result_box {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 0 45px; }
+    .result_box .result_imgbox {
+      width: 130px;
+      height: 130px; }
+    .result_box .text_top {
+      font-size: 23px;
+      line-height: 37px;
+      letter-spacing: -1.38px;
+      margin-top: 45px; }
+    .result_box .text_bottom {
+      font-size: 20px;
+      line-height: 33px;
+      letter-spacing: -1.2px;
+      margin-top: 50px; }
+    .result_box .result_email {
+      padding: 25px;
+      font-size: 23px;
+      line-height: 37px;
+      letter-spacing: -0.46px;
+      margin-top: 50px; } }
 .container.sub {
   background: url("../images/bg_sub.png") no-repeat 100%;
   background-size: cover;

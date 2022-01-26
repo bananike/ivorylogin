@@ -88,3 +88,54 @@
         border-bottom: 1px solid $color_dark;
     }
 }
+
+@media (min-width: $media_base) {
+    .result_modal {
+        padding: 40px;
+
+        .result_close {
+            width: 30px;
+            height: 30px;
+        }
+
+        h2 {
+            font-size: 40px;
+            line-height: 55px;
+            letter-spacing: -2.4px;
+            margin-top: 80px;
+        }
+    }
+
+    .result_box {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        padding: 0 45px;
+
+        .result_imgbox {
+            width: 130px;
+            height: 130px;
+        }
+
+        .text_top {
+            font-size: 23px;
+            line-height: 37px;
+            letter-spacing: -1.38px;
+            margin-top: 45px;
+        }
+
+        .text_bottom {
+            font-size: 20px;
+            line-height: 33px;
+            letter-spacing: -1.2px;
+            margin-top: 50px;
+        }
+
+        .result_email {
+            padding: 25px;
+            font-size: 23px;
+            line-height: 37px;
+            letter-spacing: -0.46px;
+            margin-top: 50px;
+        }
+    }
+}
