@@ -9,9 +9,9 @@
 @font-face { font-family: mgothic; src: url("../fonts/mgothic090.ttf"); font-weight: 900; font-style: normal; }
 @font-face { font-family: mgothic; src: url("../fonts/mgothic100.ttf"); font-weight: 1000; font-style: normal; }
 .container { max-width: 640px; mix-blend-mode: multiply; margin: 0 auto; }
-.container.login { background: url("../assets/images/bg_login.png") no-repeat 100%; background-size: cover; }
-.container.sub { background: url("../assets/images/bg_sub.png") no-repeat 100%; background-size: cover; }
-.container.complete { background: url("../assets/images/bg_complete.png") no-repeat 100%; background-size: cover; }
+.container.login { background: url("/assets/images/bg_login.png") no-repeat 100%; background-size: cover; }
+.container.sub { background: url("/assets/images/bg_sub.png") no-repeat 100%; background-size: cover; }
+.container.complete { background: url("/assets/images/bg_complete.png") no-repeat 100%; background-size: cover; }
 
 .login_wrapper { padding: calc(100vw * (158/640)) calc(100vw * (60/640)) calc(100vw * (70/640)); width: calc(100vw * (553/640)); min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; background-color: rgba(0, 0, 0, 0.2); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
 .login_wrapper .login_box .input_box { margin-top: calc(100vw * (65/640)); }
