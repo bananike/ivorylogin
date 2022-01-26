@@ -1,5 +1,4 @@
 function callAlert(value) {
-    console.log(value);
     var body = $('body');
     var alert = '';
     alert += '<div class="alert"><div class="alert_container">';
@@ -10,14 +9,13 @@ function callAlert(value) {
     alert +=
         '</div><div class="btn_group"><button type="button" class="alert_conform">';
     alert += value.btn;
-    alert += '</button></div></div></div>';
+    alert += '</button></div></div><div class="back"></div></div>';
     body.css('overflow', 'hidden');
     body.find('.container').append(alert);
 }
 
 // 알럿 컨펌 버튼
-$(document).on('click', '.alert_conform', function () {
-    console.log('asdasdsd');
+$(document).on('click', '.alert_conform, .alert .back', function () {
     var body = $('body');
     $('.alert').remove();
     body.css('overflow', 'auto');

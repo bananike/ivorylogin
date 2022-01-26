@@ -1,3 +1,28 @@
+$color_light: #fff;
+$color_dark: #000;
+
+$media_base: 640px;
+@function fn_calc($v, $max: 640) {
+    @return calc(100vw * (#{$v}/#{$max}));
+}
+
+@keyframes bgToneDown {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+@keyframes scaleUp {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 .alert {
     width: 100%;
     height: 100%;
@@ -17,7 +42,8 @@
     background-color: $color_light;
     position: relative;
     box-shadow: 0 0 fn_calc($v: 10) rgba(0, 0, 0, 0.3);
-    animation: scaleUp 0.3s ease-in-out forwards;
+    animation: scaleUp 0.15s ease-in-out forwards;
+    z-index: 1;
 
     .title {
         font-weight: 700;
@@ -25,6 +51,7 @@
         line-height: fn_calc($v: 35);
         letter-spacing: fn_calc($v: -2.1);
         color: $color_dark;
+        word-break: keep-all;
         text-align: center;
     }
 
@@ -36,6 +63,7 @@
         line-height: fn_calc($v: 37);
         letter-spacing: fn_calc($v: -1.38);
         color: $color_dark;
+        word-break: keep-all;
         text-align: center;
     }
 
@@ -66,6 +94,16 @@
                 border-right: fn_calc($v: 1) solid $color_light;
             }
         }
+    }
+
+    + .back {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
     }
 }
 
