@@ -8,7 +8,7 @@ $bgs: ('login', 'sub', 'complete');
 
     @each $bg in $bgs {
         &.#{$bg} {
-            background: url('../images/bg_#{$bg}.png') no-repeat 100%;
+            background: url('#{$base_url}bg_#{$bg}.png') no-repeat 100%;
             background-size: cover;
         }
     }
