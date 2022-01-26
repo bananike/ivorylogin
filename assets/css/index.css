@@ -1,3 +1,7 @@
+@keyframes bgToneDown { 0% { background-color: rgba(0, 0, 0, 0); }
+  100% { background-color: rgba(0, 0, 0, 0.5); } }
+@keyframes scaleUp { 0% { transform: scale(0); }
+  100% { transform: scale(1); } }
 @font-face { font-family: mgothic; src: url("../fonts/mgothic010.ttf"); font-weight: 100; font-style: normal; }
 @font-face { font-family: mgothic; src: url("../fonts/mgothic020.ttf"); font-weight: 200; font-style: normal; }
 @font-face { font-family: mgothic; src: url("../fonts/mgothic030.ttf"); font-weight: 300; font-style: normal; }
@@ -12,6 +16,13 @@
 .container.login { background: url("../images/bg_login.png") no-repeat 100%; background-size: cover; }
 .container.sub { background: url("../images/bg_sub.png") no-repeat 100%; background-size: cover; }
 .container.complete { background: url("../images/bg_complete.png") no-repeat 100%; background-size: cover; }
+.container .alert { width: 100%; height: 100vh; position: absolute; top: 0; left: 0; z-index: 9999; display: flex; justify-content: center; align-items: center; animation: bgToneDown 0.3s forwards; }
+.container .alert_container { width: calc(100vw * (400/640)); padding: calc(100vw * (80/640)) calc(100vw * (40/640)) calc(100vw * (60/640)); background-color: #fff; position: relative; box-shadow: 0 0 calc(100vw * (10/640)) rgba(0, 0, 0, 0.3); animation: scaleUp 0.3s ease-in-out forwards; }
+.container .alert_container .title { font-weight: 700; font-size: calc(100vw * (35/640)); line-height: calc(100vw * (35/640)); letter-spacing: calc(100vw * (-2.1/640)); color: #000; text-align: center; }
+.container .alert_container .content { font-weight: 500; margin-top: calc(100vw * (25/640)); margin-bottom: calc(100vw * (60/640)); font-size: calc(100vw * (23/640)); line-height: calc(100vw * (37/640)); letter-spacing: calc(100vw * (-1.38/640)); color: #000; text-align: center; }
+.container .alert_container .btn_group { position: absolute; display: flex; flex-direction: row; flex-wrap: nowrap; left: 0; bottom: 0; width: 100%; height: calc(100vw * (60/640)); }
+.container .alert_container .btn_group button { display: flex; justify-content: center; align-items: center; text-align: center; width: 100%; background-color: #000; color: #fff; font-weight: 300; font-size: calc(100vw * (25/640)); line-height: calc(100vw * (25/640)); letter-spacing: calc(100vw * (-0.25/640)); }
+.container .alert_container .btn_group button:not(:last-child) { border-right: calc(100vw * (1/640)) solid #fff; }
 
 .login_wrapper { padding: calc(100vw * (158/640)) calc(100vw * (60/640)) calc(100vw * (70/640)); width: calc(100vw * (553/640)); min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; background-color: rgba(0, 0, 0, 0.2); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
 .login_wrapper .login_box .input_box { margin-top: calc(100vw * (65/640)); }
@@ -21,8 +32,9 @@
 .login_wrapper .login_box .login_input + label:after { content: ''; display: block; position: absolute; width: 0; height: calc(100vw * (5/640)); background-color: #000; transition: width 0.3s; }
 .login_wrapper .login_box .login_input:focus + label:after { width: 100%; transition: width 0.3s ease-in-out; }
 .login_wrapper .login_box .input_icon { display: block; position: absolute; right: 0; bottom: calc(100vw * (22/640)); }
-.login_wrapper .login_box .input_icon.delete { opacity: 0; width: calc(100vw * (22/640)); height: calc(100vw * (22/640)); }
+.login_wrapper .login_box .input_icon.delete { opacity: 0; display: none; width: calc(100vw * (22/640)); height: calc(100vw * (22/640)); }
 .login_wrapper .login_box .input_icon.show_password { width: calc(100vw * (32/640)); height: calc(100vw * (22/640)); }
+.login_wrapper .login_box .input_icon.show_password img { display: none; }
 .login_wrapper .login_box .input_icon img { width: 100%; height: 100%; object-fit: cover; object-fit: contain; }
 @media (min-width: 640px) { .login_wrapper .login_box .input_box { margin-top: 65px; }
   .login_wrapper .login_box .login_input { height: 70px; font-size: 25px; line-height: 35px; letter-spacing: -0.5px; }

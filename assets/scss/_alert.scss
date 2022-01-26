@@ -1,0 +1,70 @@
+.alert {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bgToneDown 0.3s forwards;
+}
+
+.alert_container {
+    width: fn_calc($v: 400);
+    padding: fn_calc($v: 80) fn_calc($v: 40) fn_calc($v: 60);
+    background-color: $color_light;
+    position: relative;
+    box-shadow: 0 0 fn_calc($v: 10) rgba(0, 0, 0, 0.3);
+    animation: scaleUp 0.3s ease-in-out forwards;
+
+    .title {
+        font-weight: 700;
+        font-size: fn_calc($v: 35);
+        line-height: fn_calc($v: 35);
+        letter-spacing: fn_calc($v: -2.1);
+        color: $color_dark;
+        text-align: center;
+    }
+
+    .content {
+        font-weight: 500;
+        margin-top: fn_calc($v: 25);
+        margin-bottom: fn_calc($v: 60);
+        font-size: fn_calc($v: 23);
+        line-height: fn_calc($v: 37);
+        letter-spacing: fn_calc($v: -1.38);
+        color: $color_dark;
+        text-align: center;
+    }
+
+    .btn_group {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: fn_calc($v: 60);
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            background-color: $color_dark;
+            color: $color_light;
+            font-weight: 300;
+            font-size: fn_calc($v: 25);
+            line-height: fn_calc($v: 25);
+            letter-spacing: fn_calc($v: -0.25);
+
+            &:not(:last-child) {
+                border-right: fn_calc($v: 1) solid $color_light;
+            }
+        }
+    }
+}

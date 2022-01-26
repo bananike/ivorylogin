@@ -55,12 +55,16 @@
 
     &.delete {
         opacity: 0;
+        display: none;
         width: fn_calc($v: 22);
         height: fn_calc($v: 22);
     }
     &.show_password {
         width: fn_calc($v: 32);
         height: fn_calc($v: 22);
+        img {
+            display: none;
+        }
     }
 
     img {

@@ -12,6 +12,8 @@ $bgs: ('login', 'sub', 'complete');
             background-size: cover;
         }
     }
+
+    @import 'alert';
 }
 
 .login_wrapper {
