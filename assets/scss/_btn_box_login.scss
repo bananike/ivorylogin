@@ -1,0 +1,49 @@
+.btn_box_login {
+    margin-top: fn_calc($v: 40);
+    display: flex;
+    flex-direction: column;
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-weight: 700;
+        height: fn_calc($v: 67);
+        font-size: fn_calc($v: 20);
+        line-height: fn_calc($v: 20);
+        letter-spacing: fn_calc($v: -1.2);
+        border-radius: fn_calc($v: 30);
+
+        &:not(:last-child) {
+            margin-bottom: fn_calc($v: 20);
+        }
+
+        &.btn_login {
+            background-color: $color_dark;
+            color: $color_light;
+        }
+        &.btn_join {
+            background-color: $color_light;
+            color: $color_dark;
+        }
+    }
+}
+
+@media (min-width: $media_base) {
+    .btn_box_login {
+        margin-top: 40px;
+
+        button {
+            height: 67px;
+            font-size: 20px;
+            line-height: 20px;
+            letter-spacing: -1.2px;
+            border-radius: 30px;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

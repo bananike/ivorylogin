@@ -1,0 +1,38 @@
+// 컨테이너 클래스 별 bg이미지 네임
+$bgs: ('login', 'sub', 'complete');
+
+.container {
+    max-width: $media_base;
+    mix-blend-mode: multiply;
+    margin: 0 auto;
+
+    @each $bg in $bgs {
+        &.#{$bg} {
+            background: url('../images/bg_#{$bg}.png') no-repeat 100%;
+            background-size: cover;
+        }
+    }
+}
+
+.login_wrapper {
+    padding: fn_calc($v: 158) fn_calc($v: 60) fn_calc($v: 70);
+    width: fn_calc($v: 553);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    @import 'login_box';
+    @import 'btn_box_login';
+    @import 'find_box';
+}
+
+@media (min-width: $media_base) {
+    .login_wrapper {
+        padding: 158px 60px 70px;
+        width: 553px;
+    }
+}

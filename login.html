@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        />
+
+        <!-- css -->
+        <link rel="stylesheet" href="assets/css/index.css" />
+
+        <title>Login</title>
+    </head>
+    <body>
+        <div class="container login">
+            <div class="login_wrapper">
+                <div class="wrapper_top">
+                    <!-- login input group -->
+                    <div class="login_box">
+                        <h1>엄마도 아빠도<br />이번 생은<br />처음이라</h1>
+                        <div class="input_box">
+                            <div class="input_form">
+                                <input
+                                    class="form_input login_input"
+                                    placeholder="이메일 또는 아이디"
+                                    type="email"
+                                    name="loginId"
+                                    id="loginId"
+                                />
+                                <label for="loginId"></label>
+                                <button type="button" class="input_icon delete">
+                                    <img
+                                        src="assets/images/delete.svg"
+                                        alt="입력값 삭제"
+                                    />
+                                </button>
+                            </div>
+                            <div class="input_form">
+                                <input
+                                    class="form_input login_input"
+                                    placeholder="비밀번호 입력"
+                                    type="password"
+                                    name="loginPassword"
+                                    id="loginPassword"
+                                />
+                                <label for="loginPassword"></label>
+                                <button
+                                    type="button"
+                                    class="input_icon show_password"
+                                >
+                                    <img
+                                        src="assets/images/show_password.svg"
+                                        alt="비밀번호 보이기"
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- login input group -->
+
+                    <!-- login btn group -->
+                    <div class="btn_box_login">
+                        <button type="button" class="btn_login">로그인</button>
+                        <button type="button" class="btn_join">회원가입</button>
+                    </div>
+                    <!-- login btn group -->
+
+                    <!-- find group -->
+                    <div class="find_box">
+                        <button type="button" class="btn_findId">
+                            아이디 찾기
+                        </button>
+                        <button type="button" class="btn_findPassword">
+                            비밀번호 찾기
+                        </button>
+                        <a href="/" class="more_help"
+                            ><img
+                                class="icon_left"
+                                src="assets/images/more_help.svg"
+                                alt="" /><span>도움이 필요하세요?</span
+                            ><img
+                                class="icon_right"
+                                src="assets/images/right_white.svg"
+                                alt=""
+                        /></a>
+                    </div>
+                    <!-- find group -->
+                </div>
+
+                <!-- logo -->
+                <div class="logo">
+                    <img src="assets/images/logo.svg" alt="Ivory" />
+                </div>
+                <!-- logo -->
+            </div>
+        </div>
+
+        <!-- jquery -->
+        <script type="text/javascript" src="assets/js/jQuery.js"></script>
+
+        <!-- common -->
+        <script type="text/javascript" src="assets/js/common.js"></script>
+    </body>
+</html>

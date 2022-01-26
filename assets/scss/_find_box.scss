@@ -1,0 +1,104 @@
+.find_box {
+    margin-top: fn_calc($v: 60);
+    padding-bottom: fn_calc($v: 67);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        color: $color_light;
+        opacity: 0.7;
+        font-weight: 500;
+        border: fn_calc($v: 2) solid $color_light;
+        border-radius: fn_calc($v: 30);
+        height: fn_calc($v: 55);
+        font-size: fn_calc($v: 20);
+        line-height: fn_calc($v: 35);
+        letter-spacing: fn_calc($v: -1.2);
+
+        &:not(:first-child) {
+            margin-left: fn_calc($v: 9);
+        }
+    }
+}
+
+.more_help {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    opacity: 0.7;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: $color_light;
+    font-weight: 500;
+    font-size: fn_calc($v: 20);
+    line-height: fn_calc($v: 20);
+    letter-spacing: fn_calc($v: -1.2);
+
+    .icon_left {
+        width: fn_calc($v: 26.7);
+        height: fn_calc($v: 26.7);
+    }
+    .icon_right {
+        width: fn_calc($v: 14);
+        height: fn_calc($v: 18);
+    }
+
+    span {
+        margin: 0 fn_calc($v: 7);
+    }
+
+    &:active,
+    &:focus,
+    &:visited {
+        color: $color_light;
+    }
+}
+
+@media (min-width: $media_base) {
+    .find_box {
+        margin-top: 60px;
+        padding-bottom: 67px;
+
+        button {
+            border: 2px solid $color_light;
+            border-radius: 30px;
+            height: 55px;
+            font-size: 20px;
+            line-height: 35px;
+            letter-spacing: -1.2px;
+
+            &:not(:first-child) {
+                margin-left: 9px;
+            }
+        }
+    }
+
+    .more_help {
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: -1.2px;
+
+        .icon_left {
+            width: 26.7px;
+            height: 26.7px;
+        }
+        .icon_right {
+            width: 14px;
+            height: 18px;
+        }
+
+        span {
+            margin: 0 7px;
+        }
+    }
+}

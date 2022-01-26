@@ -1,0 +1,112 @@
+.input_box {
+    margin-top: fn_calc($v: 65);
+}
+
+.login_input {
+    height: fn_calc($v: 70);
+    background-color: transparent;
+    width: 100%;
+    font-weight: 500;
+    font-size: fn_calc($v: 25);
+    line-height: fn_calc($v: 35);
+    letter-spacing: fn_calc($v: -0.5);
+    color: $color_light;
+    position: relative;
+
+    &::placeholder {
+        font-weight: 500;
+        font-size: fn_calc($v: 25);
+        line-height: fn_calc($v: 35);
+        letter-spacing: fn_calc($v: -0.5);
+        color: $color_light;
+        opacity: 0.5;
+    }
+
+    + label {
+        display: block;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: fn_calc($v: 10);
+        height: fn_calc($v: 2);
+        background-color: $color_light;
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 0;
+            height: fn_calc($v: 5);
+            background-color: $color_dark;
+            transition: width 0.3s;
+        }
+    }
+
+    &:focus + label:after {
+        width: 100%;
+        transition: width 0.3s ease-in-out;
+    }
+}
+
+.input_icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: fn_calc($v: 22);
+
+    &.delete {
+        opacity: 0;
+        width: fn_calc($v: 22);
+        height: fn_calc($v: 22);
+    }
+    &.show_password {
+        width: fn_calc($v: 32);
+        height: fn_calc($v: 22);
+    }
+
+    img {
+        @include objectfit {
+            object-fit: contain;
+        }
+    }
+}
+
+@media (min-width: $media_base) {
+    .input_box {
+        margin-top: 65px;
+    }
+
+    .login_input {
+        height: 70px;
+        font-size: 25px;
+        line-height: 35px;
+        letter-spacing: -0.5px;
+
+        &::placeholder {
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 35px;
+            letter-spacing: -0.5px;
+        }
+
+        + label {
+            bottom: 10px;
+            height: 2px;
+            &:after {
+                height: 5px;
+            }
+        }
+    }
+
+    .input_icon {
+        bottom: 22px;
+
+        &.delete {
+            width: 22px;
+            height: 22px;
+        }
+        &.show_password {
+            width: 32px;
+            height: 22px;
+        }
+    }
+}

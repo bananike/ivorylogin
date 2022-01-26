@@ -1,0 +1,15 @@
+$color_light: #fff;
+$color_dark: #000;
+
+$media_base: 640px;
+
+@mixin objectfit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @content;
+}
+
+@function fn_calc($v, $max: 640) {
+    @return calc(100vw * (#{$v}/#{$max}));
+}

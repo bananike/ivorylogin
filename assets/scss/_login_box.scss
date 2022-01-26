@@ -1,0 +1,33 @@
+.login_box {
+    @import 'input_box';
+}
+.login_box h1 {
+    font-size: fn_calc($v: 60);
+    line-height: fn_calc($v: 75);
+    letter-spacing: fn_calc($v: -3.6);
+    font-weight: 700;
+    color: $color_light;
+}
+
+.logo {
+    position: relative;
+    width: fn_calc($v: 152);
+    height: fn_calc($v: 62);
+    margin-top: fn_calc($v: 40);
+    img {
+        @include objectfit;
+    }
+}
+
+@media (min-width: $media_base) {
+    .login_box h1 {
+        font-size: 60px;
+        line-height: 75px;
+        letter-spacing: -3.6px;
+    }
+    .logo {
+        width: 152px;
+        height: 62px;
+        margin-top: 40px;
+    }
+}

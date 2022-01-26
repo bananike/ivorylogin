@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: mgothic, sans-serif;
+}
+input,
+button {
+    border: 0;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+a {
+    text-decoration: none;
+}
+img {
+    display: block;
+}
+.input_form {
+    position: relative;
+}
