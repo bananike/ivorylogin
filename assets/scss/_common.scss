@@ -4,7 +4,7 @@
     box-sizing: border-box;
     list-style: none;
     font-family: mgothic, sans-serif;
-    outline: 1px solid rgba(255, 0, 0, 0.1);
+    // outline: 1px solid rgba(255, 0, 0, 0.1);
 }
 body {
     background-color: #000;
@@ -21,6 +21,12 @@ a {
 }
 img {
     display: block;
+}
+
+.container {
+    max-width: $media_base;
+    margin: 0 auto;
+    min-height: 100vh;
 }
 .form_group {
     position: relative;
@@ -85,11 +91,83 @@ img {
         animation: slideUpError 0.3s forwards;
 
         p {
-            color: $color_warning;
+            color: $color_danger;
             font-weight: 500;
             font-size: fn_calc($v: 18);
             line-height: fn_calc($v: 18);
             letter-spacing: fn_calc($v: -1.08);
+        }
+    }
+}
+.block_btn {
+    margin-top: fn_calc($v: 60);
+    width: 100%;
+    height: fn_calc($v: 67);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color_primary;
+    color: $color_light;
+    font-weight: 500;
+    font-size: fn_calc($v: 25);
+    line-height: fn_calc($v: 25);
+    letter-spacing: fn_calc($v: -1.5);
+    border-radius: fn_calc($v: 30);
+    transition: background-color 0.3s;
+
+    &[disabled] {
+        background-color: $color_lightdark;
+        transition: background-color 0.3s;
+    }
+}
+.form_checkbox {
+    display: flex;
+    align-items: center;
+    margin-right: fn_calc($v: -7);
+
+    .form_label {
+        font-weight: 500;
+        font-size: fn_calc($v: 20);
+        line-height: fn_calc($v: 20);
+        letter-spacing: fn_calc($v: -1.2);
+    }
+
+    .fake_box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fn_calc($v: 37);
+        height: fn_calc($v: 37);
+        border: 1px solid $color_dark;
+        border-radius: 50%;
+        margin: 0 fn_calc($v: 7);
+        transition: border-color 0.3s, background-color 0.3s;
+
+        &:after {
+            content: '';
+            display: block;
+            width: fn_calc($v: 21.8);
+            height: fn_calc($v: 16.5);
+            background: url('#{$base_url}check_white.svg') no-repeat 100%;
+            background-size: contain;
+            transform-origin: center;
+            transform: scale(0);
+        }
+    }
+
+    > input[type='checkbox'] {
+        display: none;
+    }
+
+    input[type='checkbox']:checked {
+        ~ .fake_box {
+            border-color: $color_primary;
+            background-color: $color_primary;
+            transition: border-color 0.3s, background-color 0.3s;
+
+            &:after {
+                animation: scaleUpdown 0.3s ease-in-out forwards;
+            }
         }
     }
 }
@@ -129,6 +207,36 @@ img {
                 font-size: 18px;
                 line-height: 18px;
                 letter-spacing: -1.08px;
+            }
+        }
+    }
+
+    .block_btn {
+        margin-top: 60px;
+        height: 67px;
+        font-size: 25px;
+        line-height: 25px;
+        letter-spacing: -1.5px;
+        border-radius: 30px;
+    }
+
+    .form_checkbox {
+        margin-right: -7px;
+
+        .form_label {
+            font-size: 20px;
+            line-height: 20px;
+            letter-spacing: -1.2px;
+        }
+
+        .fake_box {
+            width: 37px;
+            height: 37px;
+            margin: 0 7px;
+
+            &:after {
+                width: 21.8px;
+                height: 16.5px;
             }
         }
     }

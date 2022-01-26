@@ -1,7 +1,5 @@
 @import 'variable';
 @import 'common';
-@import 'layout';
-
 .container.login {
     background: url('#{$base_url}bg_login.png') no-repeat 100%;
     background-size: cover;

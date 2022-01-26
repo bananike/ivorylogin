@@ -1,8 +1,11 @@
 $color_light: #fff;
 $color_dark: #000;
 $color_semidark: #060606;
+$color_lightdark: #a5a5a5;
 $color_gray: #d2d2d2;
 $color_warning: #fb8713;
+$color_primary: #68c0b5;
+$color_danger: #ff0000;
 
 $media_base: 640px;
 
@@ -19,6 +22,22 @@ $base_url: '../images/';
     @return calc(100vw * (#{$v}/#{$max}));
 }
 
+@keyframes bgToneDown {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+@keyframes scaleUp {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 @keyframes slideUpError {
     0% {
         transform: translateY(0%);
@@ -38,5 +57,34 @@ $base_url: '../images/';
     100% {
         transform: translateY(0%);
         opacity: 1;
+    }
+}
+
+@keyframes scaleUpdown {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes popupSlideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes popupSlideDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
     }
 }

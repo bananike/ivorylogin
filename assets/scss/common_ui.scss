@@ -1,25 +1,9 @@
-$color_light: #fff;
-$color_dark: #000;
+@import '_variable';
 
-$media_base: 640px;
-@function fn_calc($v, $max: 640) {
-    @return calc(100vw * (#{$v}/#{$max}));
-}
-
-@keyframes bgToneDown {
-    0% {
-        background-color: rgba(0, 0, 0, 0);
-    }
-    100% {
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-}
-@keyframes scaleUp {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
+body {
+    &.popup_on,
+    &.alert_on {
+        overflow: hidden;
     }
 }
 
@@ -91,9 +75,105 @@ $media_base: 640px;
             letter-spacing: fn_calc($v: -0.25);
 
             &:not(:last-child) {
-                border-right: fn_calc($v: 1) solid $color_light;
+                border-right: 1px solid $color_light;
             }
         }
+    }
+
+    + .back {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    animation: bgToneDown 0.3s forwards;
+}
+
+.popup_container {
+    max-height: 80%;
+    height: fn_calc($v: 1045);
+    width: 100%;
+    z-index: 1;
+    border-top-left-radius: fn_calc($v: 30);
+    border-top-right-radius: fn_calc($v: 30);
+    background-color: $color_light;
+    box-shadow: 0 0 fn_calc($v: 10) rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transform-origin: bottom;
+    transform: translateY(100%);
+    animation: popupSlideUp 0.3s ease-in-out forwards;
+
+    &.closing {
+        animation: popupSlideDown 0.3s ease-in-out forwards;
+    }
+
+    .popup_close {
+        width: fn_calc($v: 140);
+        height: fn_calc($v: 50);
+        padding: fn_calc($v: 20);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:after {
+            content: '';
+            display: block;
+            width: fn_calc($v: 100);
+            height: fn_calc($v: 10);
+            background-color: $color_gray;
+        }
+    }
+    .popup_content {
+        flex: 1;
+        margin-top: fn_calc($v: 28);
+        overflow: auto;
+        padding: 0 fn_calc($v: 60);
+        width: 100%;
+
+        .title {
+            font-weight: 700;
+            font-size: fn_calc($v: 30);
+            line-height: fn_calc($v: 55);
+            letter-spacing: fn_calc($v: -1.8);
+            margin-bottom: fn_calc($v: 35);
+        }
+
+        .text {
+            white-space: pre-wrap;
+            font-weight: 300;
+            font-size: fn_calc($v: 18);
+            line-height: fn_calc($v: 35);
+            letter-spacing: fn_calc($v: -1.26);
+        }
+    }
+    .popup_footer_btn {
+        width: 100%;
+        height: fn_calc($v: 100);
+        font-weight: 500;
+        font-size: fn_calc($v: 25);
+        line-height: fn_calc($v: 25);
+        letter-spacing: fn_calc($v: -1.5);
+        background-color: $color_primary;
+        color: $color_light;
     }
 
     + .back {
@@ -133,11 +213,48 @@ $media_base: 640px;
                 font-size: 25px;
                 line-height: 25px;
                 letter-spacing: -0.25px;
-
-                &:not(:last-child) {
-                    border-right: 1px solid $color_light;
-                }
             }
+        }
+    }
+
+    .popup_container {
+        height: 1045px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+        .popup_close {
+            width: 140px;
+            height: 50px;
+            padding: 20px;
+
+            &:after {
+                width: 100px;
+                height: 10px;
+            }
+        }
+        .popup_content {
+            margin-top: 28px;
+            padding: 0 60px;
+
+            .title {
+                font-size: 30px;
+                line-height: 55px;
+                letter-spacing: -1.8px;
+                margin-bottom: 35px;
+            }
+
+            .text {
+                font-size: 18px;
+                line-height: 35px;
+                letter-spacing: -1.26px;
+            }
+        }
+        .popup_footer_btn {
+            height: 100px;
+            font-size: 25px;
+            line-height: 25px;
+            letter-spacing: -1.5px;
         }
     }
 }

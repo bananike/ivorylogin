@@ -1,0 +1,90 @@
+.result_modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: $color_light;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: fn_calc($v: 40);
+    display: none;
+    flex-direction: column;
+    overflow: auto;
+    transform-origin: botton;
+    transform: translateY(100%);
+    animation: popupSlideUp 0.3s forwards;
+
+    &.closing {
+        animation: popupSlideDown 0.3s forwards;
+    }
+
+    .result_close {
+        width: fn_calc($v: 30);
+        height: fn_calc($v: 30);
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    h2 {
+        width: 100%;
+        text-align: left;
+        font-weight: 700;
+        font-size: fn_calc($v: 40);
+        line-height: fn_calc($v: 55);
+        letter-spacing: fn_calc($v: -2.4);
+        margin-top: fn_calc($v: 80);
+    }
+}
+
+.result_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+    text-align: center;
+    margin-top: fn_calc($v: 60);
+    margin-bottom: fn_calc($v: 60);
+    padding: 0 fn_calc($v: 45);
+
+    .result_imgbox {
+        width: fn_calc($v: 130);
+        height: fn_calc($v: 130);
+
+        img {
+            @include objectfit;
+        }
+    }
+
+    .text_top {
+        font-weight: 500;
+        font-size: fn_calc($v: 23);
+        line-height: fn_calc($v: 37);
+        letter-spacing: fn_calc($v: -1.38);
+        margin-top: fn_calc($v: 45);
+    }
+
+    .text_bottom {
+        font-weight: 300;
+        font-size: fn_calc($v: 20);
+        line-height: fn_calc($v: 33);
+        letter-spacing: fn_calc($v: -1.2);
+        margin-top: fn_calc($v: 50);
+    }
+
+    .result_email {
+        font-weight: 500;
+        padding: fn_calc($v: 25);
+        font-size: fn_calc($v: 23);
+        line-height: fn_calc($v: 37);
+        letter-spacing: fn_calc($v: -0.46);
+        margin-top: fn_calc($v: 50);
+        border-top: 1px solid $color_dark;
+        border-bottom: 1px solid $color_dark;
+    }
+}

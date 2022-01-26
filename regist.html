@@ -34,7 +34,7 @@
                     <div class="form_group">
                         <label for="registId">이메일</label>
                         <input
-                            class="form_input regist_input"
+                            class="form_input regist_input require"
                             placeholder="이메일 주소를 입력해주세요."
                             type="email"
                             name="registId"
@@ -48,11 +48,33 @@
                             />
                         </button>
                         <div class="error_message"></div>
+                        <ul class="email_list" id="emailList">
+                            <li>
+                                <span class="input_value"></span
+                                ><span class="email_address">naver.com</span>
+                            </li>
+                            <li>
+                                <span class="input_value"></span
+                                ><span class="email_address">daum.net</span>
+                            </li>
+                            <li>
+                                <span class="input_value"></span
+                                ><span class="email_address">kakao.com</span>
+                            </li>
+                            <li>
+                                <span class="input_value"></span
+                                ><span class="email_address">nate.com</span>
+                            </li>
+                            <li>
+                                <span class="input_value"></span
+                                ><span class="email_address">gmail.com</span>
+                            </li>
+                        </ul>
                     </div>
                     <div class="form_group">
                         <label for="registPassword">비밀번호</label>
                         <input
-                            class="form_input regist_input"
+                            class="form_input regist_input require"
                             placeholder="비밀번호를 입력해주세요."
                             type="password"
                             name="registPassword"
@@ -79,7 +101,7 @@
                     <div class="form_group">
                         <label for="registPasswordConfirm">비밀번호 확인</label>
                         <input
-                            class="form_input regist_input"
+                            class="form_input regist_input require"
                             placeholder="위와 동일한 비밀번호를 입력해주세요."
                             type="password"
                             name="registPasswordConfirm"
@@ -105,14 +127,136 @@
                     </div>
                 </div>
                 <!-- input group -->
+
+                <!-- agree box -->
+                <div class="agree_box">
+                    <div class="all_check">
+                        <h3>약관 동의</h3>
+                        <div class="form_checkbox">
+                            <label class="form_label" for="agreeBulk"
+                                >전체동의</label
+                            >
+                            <input type="checkbox" id="agreeBulk" />
+                            <label for="agreeBulk" class="fake_box"></label>
+                        </div>
+                    </div>
+                    <ul class="agree_list" id="agreeList">
+                        <li>
+                            <a data-popup="agreeService" href="/"
+                                >서비스 이용약관 (필수)</a
+                            >
+                            <div class="form_checkbox">
+                                <input
+                                    type="checkbox"
+                                    id="agreeService"
+                                    require
+                                />
+                                <label
+                                    for="agreeService"
+                                    class="fake_box"
+                                ></label>
+                            </div>
+                        </li>
+                        <li>
+                            <a data-popup="agreePrivicy" href="/"
+                                >개인정보 처리방침 (필수)</a
+                            >
+                            <div class="form_checkbox">
+                                <input
+                                    type="checkbox"
+                                    id="agreePrivicy"
+                                    require
+                                />
+                                <label
+                                    for="agreePrivicy"
+                                    class="fake_box"
+                                ></label>
+                            </div>
+                        </li>
+                        <li>
+                            <a data-popup="agreeTotal" href="/"
+                                >통합회원가입 약관 (필수)</a
+                            >
+                            <div class="form_checkbox">
+                                <input
+                                    type="checkbox"
+                                    id="agreeTotal"
+                                    require
+                                />
+                                <label
+                                    for="agreeTotal"
+                                    class="fake_box"
+                                ></label>
+                            </div>
+                        </li>
+                        <li>
+                            <a data-popup="agreeInfo" href="/"
+                                >선택정보수집 (선택)</a
+                            >
+                            <div class="form_checkbox">
+                                <input type="checkbox" id="agreeInfo" />
+                                <label for="agreeInfo" class="fake_box"></label>
+                            </div>
+                        </li>
+                        <li>
+                            <a data-popup="agreePrivicy2" href="/"
+                                >개인정보처리방침 (선택)</a
+                            >
+                            <div class="form_checkbox">
+                                <input type="checkbox" id="agreePrivicy2" />
+                                <label
+                                    for="agreePrivicy2"
+                                    class="fake_box"
+                                ></label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- agree box -->
+
+                <!-- block btn -->
+                <button
+                    type="button"
+                    class="block_btn"
+                    id="btnAuthentication"
+                    disabled="true"
+                >
+                    본인 인증하기
+                </button>
+                <!-- btn -->
             </div>
             <!-- sub wrapper -->
+
+            <!-- result modal -->
+            <div class="result_modal" id="authDuplication">
+                <button type="button" class="result_close">
+                    <img src="assets/images/delete_black.svg" alt="닫기" />
+                </button>
+                <h2>본인인증 중복</h2>
+                <div class="result_box">
+                    <div class="result_imgbox">
+                        <img src="assets/images/user.svg" alt="유저" />
+                    </div>
+                    <p class="text_top">
+                        회원님의 명의로<br />본인인증된 아이디가 있습니다.
+                    </p>
+                    <div class="result_email">jungbok@login.id</div>
+                    <p class="text_bottom">
+                        본인명의의 여러 휴대전화 번호를 사용하는 경우여도<br />1개의
+                        계정(아이디)만 실명인증 가능합니다.
+                    </p>
+                    <button type="button" class="block_btn" id="btnLogin">
+                        로그인
+                    </button>
+                </div>
+            </div>
+            <!-- result modal -->
         </div>
 
         <!-- jquery -->
         <script type="text/javascript" src="assets/js/jQuery.js"></script>
 
-        <!-- alert -->
+        <!-- common ui -->
         <script type="text/javascript" src="assets/js/common_ui.js"></script>
         <!-- common -->
         <script type="text/javascript" src="assets/js/common.js"></script>

@@ -15,7 +15,7 @@
         color: $color_light;
         opacity: 0.7;
         font-weight: 500;
-        border: fn_calc($v: 2) solid $color_light;
+        border: 2px solid $color_light;
         border-radius: fn_calc($v: 30);
         height: fn_calc($v: 55);
         font-size: fn_calc($v: 20);
@@ -70,7 +70,6 @@
         padding-bottom: 67px;
 
         button {
-            border: 2px solid $color_light;
             border-radius: 30px;
             height: 55px;
             font-size: 20px;

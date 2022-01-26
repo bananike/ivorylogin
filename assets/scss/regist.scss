@@ -1,7 +1,7 @@
 @import 'variable';
 @import 'font';
 @import 'common';
-@import 'layout';
+@import 'check_duplication';
 
 .container.sub {
     background: url('#{$base_url}bg_sub.png') no-repeat 100%;
@@ -32,6 +32,7 @@
 
     &.regist_box {
         @import 'regist_box';
+        @import 'agree_box';
     }
 }
 

@@ -13,4 +13,85 @@ h2 {
     .form_group:not(:first-child) {
         margin-top: fn_calc($v: 50);
     }
+
+    .regist_input {
+        font-size: fn_calc($v: 23);
+        line-height: fn_calc($v: 23);
+        letter-spacing: fn_calc($v: -0.46);
+    }
+}
+
+.email_list {
+    overflow: auto;
+    transform-origin: bottom;
+    transform: translateY(fn_calc($v: -10));
+    position: absolute;
+    z-index: 2;
+    background-color: $color_light;
+    width: calc(100% + #{fn_calc($v: 12)});
+    margin-left: fn_calc($v: -12);
+    display: none;
+    height: 0;
+    border: 1px solid $color_lightdark;
+
+    li {
+        height: fn_calc($v: 60);
+        padding: fn_calc($v: 18) fn_calc($v: 12);
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $color_gray;
+        }
+
+        span {
+            color: $color_dark;
+            font-weight: 500;
+            font-size: fn_calc($v: 23);
+            line-height: fn_calc($v: 23);
+            letter-spacing: fn_calc($v: -0.46);
+
+            &.email_address {
+                color: $color_primary;
+            }
+        }
+    }
+}
+
+@media (min-width: $media_base) {
+    h2 {
+        font-size: 40px;
+        line-height: 55px;
+        letter-spacing: -2.4px;
+    }
+
+    .input_box {
+        margin-top: 60px;
+
+        .form_group:not(:first-child) {
+            margin-top: 50px;
+        }
+
+        .regist_input {
+            font-size: 23px;
+            line-height: 23px;
+            letter-spacing: -0.46px;
+        }
+    }
+
+    .email_list {
+        transform: translateY(-10px);
+        width: calc(100% + #{12px});
+        margin-left: -12px;
+
+        li {
+            height: 60px;
+            padding: 18px 12px;
+            span {
+                font-size: 23px;
+                line-height: 23px;
+                letter-spacing: -0.46px;
+            }
+        }
+    }
 }
