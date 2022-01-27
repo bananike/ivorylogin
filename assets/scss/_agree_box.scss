@@ -1,6 +1,6 @@
 .agree_box {
-    margin-top: fn_calc($v: 120);
-    padding: fn_calc($v: 25) 0;
+    margin-top: fn_calc($v: 56);
+    padding: fn_calc($v: 14) 0 fn_calc($v: 23);
     border-top: 2px solid $color_dark;
     border-bottom: 2px solid $color_dark;
 }
@@ -11,8 +11,8 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: fn_calc($v: 18);
-    margin-bottom: fn_calc($v: 25);
+    padding-bottom: fn_calc($v: 14);
+    margin-bottom: fn_calc($v: 14);
     border-bottom: 0.5px solid $color_semidark;
 
     h3 {
@@ -59,13 +59,13 @@
 
 @media (min-width: $media_base) {
     .agree_box {
-        margin-top: 120px;
-        padding: 25px 0;
+        margin-top: 56px;
+        padding: 14px 0 23px;
     }
 
     .all_check {
-        padding-bottom: 18px;
-        margin-bottom: 25px;
+        padding-bottom: 14px;
+        margin-bottom: 14px;
 
         h3 {
             font-size: 27px;

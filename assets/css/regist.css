@@ -178,7 +178,7 @@ img {
       letter-spacing: calc(100vw * (-1.08/640)); }
 
 .block_btn {
-  margin-top: calc(100vw * (60/640));
+  margin-top: calc(100vw * (34/640));
   width: 100%;
   height: calc(100vw * (67/640));
   display: flex;
@@ -260,7 +260,7 @@ img {
       letter-spacing: -1.08px; }
 
   .block_btn {
-    margin-top: 60px;
+    margin-top: 34px;
     height: 67px;
     font-size: 25px;
     line-height: 25px;
@@ -336,20 +336,20 @@ img {
     font-size: calc(100vw * (23/640));
     line-height: calc(100vw * (37/640));
     letter-spacing: calc(100vw * (-1.38/640));
-    margin-top: calc(100vw * (45/640)); }
+    margin-top: calc(100vw * (40/640)); }
   .result_box .text_bottom {
     font-weight: 300;
     font-size: calc(100vw * (20/640));
     line-height: calc(100vw * (33/640));
     letter-spacing: calc(100vw * (-1.2/640));
-    margin-top: calc(100vw * (50/640)); }
+    margin-top: calc(100vw * (40/640)); }
   .result_box .result_email {
     font-weight: 500;
     padding: calc(100vw * (25/640));
     font-size: calc(100vw * (23/640));
     line-height: calc(100vw * (37/640));
     letter-spacing: calc(100vw * (-0.46/640));
-    margin-top: calc(100vw * (50/640));
+    margin-top: calc(100vw * (40/640));
     border-top: 1px solid #000;
     border-bottom: 1px solid #000; }
 
@@ -376,18 +376,18 @@ img {
       font-size: 23px;
       line-height: 37px;
       letter-spacing: -1.38px;
-      margin-top: 45px; }
+      margin-top: 40px; }
     .result_box .text_bottom {
       font-size: 20px;
       line-height: 33px;
       letter-spacing: -1.2px;
-      margin-top: 50px; }
+      margin-top: 40px; }
     .result_box .result_email {
       padding: 25px;
       font-size: 23px;
       line-height: 37px;
       letter-spacing: -0.46px;
-      margin-top: 50px; } }
+      margin-top: 40px; } }
 .container.sub {
   background: url("../images/bg_sub.png") no-repeat 100%;
   background-size: cover;
@@ -409,7 +409,7 @@ img {
 
 .sub_wrapper {
   margin: 0 calc(100vw * (40/640));
-  padding: calc(100vw * (60/640)) calc(100vw * (45/640));
+  padding: calc(100vw * (48/640)) calc(100vw * (45/640));
   border-radius: calc(100vw * (30/640));
   background-color: #fff; }
   .sub_wrapper.regist_box .input_box {
@@ -467,7 +467,7 @@ img {
     line-height: calc(100vw * (55/640));
     letter-spacing: calc(100vw * (-2.4/640)); }
   .sub_wrapper.regist_box .input_box {
-    margin-top: calc(100vw * (60/640)); }
+    margin-top: calc(100vw * (40/640)); }
     .sub_wrapper.regist_box .input_box .form_group:not(:first-child) {
       margin-top: calc(100vw * (50/640)); }
     .sub_wrapper.regist_box .input_box .regist_input {
@@ -507,7 +507,7 @@ img {
       line-height: 55px;
       letter-spacing: -2.4px; }
     .sub_wrapper.regist_box .input_box {
-      margin-top: 60px; }
+      margin-top: 40px; }
       .sub_wrapper.regist_box .input_box .form_group:not(:first-child) {
         margin-top: 50px; }
       .sub_wrapper.regist_box .input_box .regist_input {
@@ -526,8 +526,8 @@ img {
           line-height: 23px;
           letter-spacing: -0.46px; } }
   .sub_wrapper.regist_box .agree_box {
-    margin-top: calc(100vw * (120/640));
-    padding: calc(100vw * (25/640)) 0;
+    margin-top: calc(100vw * (56/640));
+    padding: calc(100vw * (14/640)) 0 calc(100vw * (23/640));
     border-top: 2px solid #000;
     border-bottom: 2px solid #000; }
   .sub_wrapper.regist_box .all_check {
@@ -536,8 +536,8 @@ img {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: calc(100vw * (18/640));
-    margin-bottom: calc(100vw * (25/640));
+    padding-bottom: calc(100vw * (14/640));
+    margin-bottom: calc(100vw * (14/640));
     border-bottom: 0.5px solid #060606; }
     .sub_wrapper.regist_box .all_check h3 {
       color: #060606;
@@ -571,11 +571,11 @@ img {
         border-bottom: 1px solid #000; }
   @media (min-width: 640px) {
     .sub_wrapper.regist_box .agree_box {
-      margin-top: 120px;
-      padding: 25px 0; }
+      margin-top: 56px;
+      padding: 14px 0 23px; }
     .sub_wrapper.regist_box .all_check {
-      padding-bottom: 18px;
-      margin-bottom: 25px; }
+      padding-bottom: 14px;
+      margin-bottom: 14px; }
       .sub_wrapper.regist_box .all_check h3 {
         font-size: 27px;
         line-height: 27px;
@@ -599,7 +599,7 @@ img {
 
   .sub_wrapper {
     margin: 0 40px;
-    padding: 60px 45px;
+    padding: 48px 45px;
     border-radius: 30px; } }
 
 /*# sourceMappingURL=regist.css.map */

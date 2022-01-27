@@ -26,7 +26,7 @@
 }
 .sub_wrapper {
     margin: 0 fn_calc($v: 40);
-    padding: fn_calc($v: 60) fn_calc($v: 45);
+    padding: fn_calc($v: 48) fn_calc($v: 45);
     border-radius: fn_calc($v: 30);
     background-color: $color_light;
 
@@ -51,7 +51,7 @@
     }
     .sub_wrapper {
         margin: 0 40px;
-        padding: 60px 45px;
+        padding: 48px 45px;
         border-radius: 30px;
     }
 }

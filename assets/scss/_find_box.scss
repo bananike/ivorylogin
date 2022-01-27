@@ -1,11 +1,13 @@
 .find_box {
-    margin-top: fn_calc($v: 60);
-    padding-bottom: fn_calc($v: 67);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+    margin-top: fn_calc($v: 47);
     position: relative;
+
+    .find_btn_group {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
 
     button {
         display: flex;
@@ -29,10 +31,9 @@
 }
 
 .more_help {
-    position: absolute;
+    position: relative;
     width: 100%;
-    bottom: 0;
-    left: 0;
+    margin-top: fn_calc($v: 23);
     opacity: 0.7;
     display: flex;
     flex-direction: row;
@@ -66,8 +67,7 @@
 
 @media (min-width: $media_base) {
     .find_box {
-        margin-top: 60px;
-        padding-bottom: 67px;
+        margin-top: 47px;
 
         button {
             border-radius: 30px;
@@ -83,6 +83,7 @@
     }
 
     .more_help {
+        margin-top: 23px;
         font-size: 20px;
         line-height: 20px;
         letter-spacing: -1.2px;

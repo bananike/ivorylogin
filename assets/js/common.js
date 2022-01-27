@@ -5,14 +5,16 @@ $(document).ready(function () {
     proposalEmail();
     agreeCheckbox();
     onReadyPopup();
+
+    // test 인증중복 모달
     onCheckDuplication();
 
     // test alert
-    callAlert({
-        title: '테스트용 alert',
-        content: '페이지가 열리면 테스트용 alert이 바로 떠버린다',
-        btn: '확인',
-    });
+    // callAlert({
+    //     title: '테스트용 alert',
+    //     content: '페이지가 열리면 테스트용 alert이 바로 떠버린다',
+    //     btn: '확인',
+    // });
     // test error message
     onErrorMessage({
         message: '에러메세지는 input의 "error" 클래스 제거로 초기화',

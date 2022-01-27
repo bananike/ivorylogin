@@ -66,7 +66,7 @@
         font-size: fn_calc($v: 23);
         line-height: fn_calc($v: 37);
         letter-spacing: fn_calc($v: -1.38);
-        margin-top: fn_calc($v: 45);
+        margin-top: fn_calc($v: 40);
     }
 
     .text_bottom {
@@ -74,7 +74,7 @@
         font-size: fn_calc($v: 20);
         line-height: fn_calc($v: 33);
         letter-spacing: fn_calc($v: -1.2);
-        margin-top: fn_calc($v: 50);
+        margin-top: fn_calc($v: 40);
     }
 
     .result_email {
@@ -83,7 +83,7 @@
         font-size: fn_calc($v: 23);
         line-height: fn_calc($v: 37);
         letter-spacing: fn_calc($v: -0.46);
-        margin-top: fn_calc($v: 50);
+        margin-top: fn_calc($v: 40);
         border-top: 1px solid $color_dark;
         border-bottom: 1px solid $color_dark;
     }
@@ -120,14 +120,14 @@
             font-size: 23px;
             line-height: 37px;
             letter-spacing: -1.38px;
-            margin-top: 45px;
+            margin-top: 40px;
         }
 
         .text_bottom {
             font-size: 20px;
             line-height: 33px;
             letter-spacing: -1.2px;
-            margin-top: 50px;
+            margin-top: 40px;
         }
 
         .result_email {
@@ -135,7 +135,7 @@
             font-size: 23px;
             line-height: 37px;
             letter-spacing: -0.46px;
-            margin-top: 50px;
+            margin-top: 40px;
         }
     }
 }
