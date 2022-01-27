@@ -109,6 +109,10 @@ button {
 a {
   text-decoration: none; }
 
+button,
+a {
+  cursor: pointer; }
+
 img {
   display: block; }
 
