@@ -98,3 +98,68 @@
         }
     }
 }
+
+@media (min-width: $media_base) {
+    .find_box_wrapper {
+        h2 {
+            font-size: 40px;
+            line-height: 55px;
+            letter-spacing: -2.4px;
+        }
+
+        .find_box {
+            .img_box {
+                width: 130px;
+                height: 130px;
+            }
+
+            .message_box {
+                font-size: 23px;
+                line-height: 37px;
+                letter-spacing: -1.38px;
+                margin-top: 40px;
+                width: 260px;
+            }
+
+            .user_info {
+                margin-top: 37px;
+                margin-bottom: 32px;
+                padding: 26px;
+
+                .user_email {
+                    font-size: 23px;
+                    line-height: 23px;
+                    letter-spacing: -0.46px;
+                }
+                .regist_date {
+                    margin-top: 15px;
+                    font-size: 20px;
+                    line-height: 23px;
+                    letter-spacing: -0.4px;
+                    span:first-child:after {
+                        margin: 0 18px;
+                    }
+                }
+            }
+
+            .block_btn {
+                margin-top: 44px;
+            }
+        }
+
+        .find_login_box {
+            button,
+            a {
+                height: 67px;
+                font-size: 20px;
+                line-height: 20px;
+                letter-spacing: -1.2px;
+                border-radius: 30px;
+
+                &:first-child {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

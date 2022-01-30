@@ -157,7 +157,20 @@
     letter-spacing: -1.2px; }
 
   .tab_content .tab_item .sub_wrapper {
-    min-height: calc(100vh - 226px); } }
+    min-height: calc(100vh - 226px); }
+
+  .tab_modal {
+    padding: 45px; }
+    .tab_modal .img_box {
+      width: 130px;
+      height: 130px; }
+    .tab_modal p {
+      margin-top: 60px;
+      font-size: 23px;
+      line-height: 23px;
+      letter-spacing: -1.38px; }
+    .tab_modal .block_btn {
+      margin-top: 60px; } }
 .find_box_wrapper {
   display: flex;
   flex-direction: column;
@@ -217,6 +230,11 @@
       margin-top: calc(100vw * (50/640)); }
     .find_box_wrapper .change_password_box .block_btn {
       margin-top: calc(100vw * (60/640)); }
+  @media (min-width: 640px) {
+    .find_box_wrapper .change_password_box .input_box .form_group:not(:first-child) {
+      margin-top: 50px; }
+    .find_box_wrapper .change_password_box .block_btn {
+      margin-top: 60px; } }
   .find_box_wrapper h2 {
     font-weight: 700;
     font-size: calc(100vw * (40/640));
@@ -290,6 +308,47 @@
       .find_box_wrapper .find_login_box a:first-child {
         margin-right: calc(100vw * (10/640)); }
 
+@media (min-width: 640px) {
+  .find_box_wrapper h2 {
+    font-size: 40px;
+    line-height: 55px;
+    letter-spacing: -2.4px; }
+  .find_box_wrapper .find_box .img_box {
+    width: 130px;
+    height: 130px; }
+  .find_box_wrapper .find_box .message_box {
+    font-size: 23px;
+    line-height: 37px;
+    letter-spacing: -1.38px;
+    margin-top: 40px;
+    width: 260px; }
+  .find_box_wrapper .find_box .user_info {
+    margin-top: 37px;
+    margin-bottom: 32px;
+    padding: 26px; }
+    .find_box_wrapper .find_box .user_info .user_email {
+      font-size: 23px;
+      line-height: 23px;
+      letter-spacing: -0.46px; }
+    .find_box_wrapper .find_box .user_info .regist_date {
+      margin-top: 15px;
+      font-size: 20px;
+      line-height: 23px;
+      letter-spacing: -0.4px; }
+      .find_box_wrapper .find_box .user_info .regist_date span:first-child:after {
+        margin: 0 18px; }
+  .find_box_wrapper .find_box .block_btn {
+    margin-top: 44px; }
+  .find_box_wrapper .find_login_box button,
+  .find_box_wrapper .find_login_box a {
+    height: 67px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -1.2px;
+    border-radius: 30px; }
+    .find_box_wrapper .find_login_box button:first-child,
+    .find_box_wrapper .find_login_box a:first-child {
+      margin-right: 10px; } }
 .result_modal {
   position: fixed;
   width: 100%;

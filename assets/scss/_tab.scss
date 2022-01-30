@@ -145,4 +145,24 @@
     .tab_content .tab_item .sub_wrapper {
         min-height: calc(100vh - #{226px});
     }
+
+    .tab_modal {
+        padding: 45px;
+
+        .img_box {
+            width: 130px;
+            height: 130px;
+        }
+
+        p {
+            margin-top: 60px;
+            font-size: 23px;
+            line-height: 23px;
+            letter-spacing: -1.38px;
+        }
+
+        .block_btn {
+            margin-top: 60px;
+        }
+    }
 }
