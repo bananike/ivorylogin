@@ -5,9 +5,12 @@ $(document).ready(function () {
     proposalEmail();
     agreeCheckbox();
     onReadyPopup();
+    tabMenu();
+    findAuthentication();
+    checkChangePasswordBtn();
 
     // test 인증중복 모달
-    onCheckDuplication();
+    // onCheckDuplication();
 
     // test alert
     // callAlert({
@@ -264,4 +267,126 @@ function closeCheckDuplication() {
             body.removeClass('modal_on');
         }, 300);
     });
+}
+
+// 012. 탭메뉴
+function tabMenu() {
+    $(document).on('click', '.tab_btn', function (e) {
+        e.preventDefault();
+        var target = $(this).attr('href');
+        var siblings = $(this).siblings('.tab_btn');
+
+        // btn
+        $(this).addClass('active');
+        $(this)
+            .closest('.tab_wrapper')
+            .removeClass(siblings.attr('href').split('#').pop());
+        $(this).closest('.tab_wrapper').addClass(target.split('#').pop());
+        siblings.removeClass('active');
+
+        // content box
+        var index = target.split('#tab_').pop() * 1 - 1;
+        $('.tab_item:eq(0)').animate(
+            {
+                'margin-left': index * -100 + '%',
+            },
+            100
+        );
+    });
+
+    // 활성화탭 설정
+    if (location.href.indexOf('#tab_') != -1) {
+        var href = location.href.split('#').pop();
+        $('.tab_wrapper ').addClass(href);
+        $('.tab_header').removeClass('active');
+        $('.tab_btn[href="#' + href + '"]').addClass('active');
+        $('.tab_item:eq(0)').css({
+            'margin-left': (href.split('tab_').pop() * 1 - 1) * -100 + '%',
+        });
+    } else {
+        $('.tab_header .tab_btn:eq(0)').addClass('active');
+    }
+}
+
+// 013. 아이디비밀번호찾기 본인인증버튼
+function findAuthentication() {
+    // 임시 버튼 연결
+    $(document).on('click', '#btnFindId', function () {
+        if (true) findIdChangeUI();
+    });
+
+    $(document).on('click', '#btnFindPassword', function () {
+        if (true) findPassWordChangeUI();
+    });
+}
+
+// 014. 아이디찾기 ui변경
+function findIdChangeUI() {
+    var testemail = 'eeeeee@dddddd.email';
+    var testdate = '2005.02.02';
+
+    $('#userEmail').html(testemail);
+    $('#registDate').html(testdate + ' 가입');
+
+    $('#imgFindId').prop('hidden', true);
+    $('#imgFindIdResult').prop('hidden', false);
+    $('#findIdMessage').prop('hidden', false);
+    $('#findIdUserInfo').prop('hidden', false);
+    $('#btnFindId').prop('hidden', true);
+    $('#btnFindIdLogin').prop('hidden', false);
+
+    $('.find_login_box a').prop('hidden', true);
+    $('#btnFind').prop('hidden', false);
+
+    // 비밀번호 찾기 이동버튼
+    $(document).on('click', '#btnFind', function () {
+        $('.tab_header .tab_btn:eq(1)').click();
+    });
+}
+
+// 015. 비밀번호찾기 ui변경
+function findPassWordChangeUI() {
+    $('#findPasswordTitle').html('비밀번호 변경');
+
+    $('#passwordFindBox').prop('hidden', true);
+    $('.change_password_box').prop('hidden', false);
+    $('#inputFindPassword').focus();
+}
+// 016. 비밀번호 변경 버튼체크
+function checkChangePasswordBtn() {
+    $(document).on('click', '#btnChangePassword', function () {
+        var password = $('#inputFindPassword').val();
+        var passwordConfirm = $('#inputFindPasswordConfirm').val();
+
+        if (password.trim() != '' && password == passwordConfirm) {
+            // validate
+            $('.tab_modal').animate(
+                {
+                    left: 0,
+                },
+                300
+            );
+        } else {
+            $('#btnChangePassword').prop('disabled', true);
+            onErrorMessage({
+                message: '8~16자 영문, 숫자, 특수문자를 모두 사용해주세요.',
+                target: '#inputFindPassword',
+            });
+            onErrorMessage({
+                message: '변경할 비밀번호와 일치하지 않습니다.',
+                target: '#inputFindPasswordConfirm',
+            });
+        }
+    });
+
+    // 변경버튼 재활성화
+    $(document).on(
+        'keyup',
+        '#inputFindPassword, #inputFindPasswordConfirm',
+        function () {
+            $('#btnChangePassword').prop('disabled', false);
+            $('#inputFindPassword').removeClass('error');
+            $('#inputFindPasswordConfirm').removeClass('error');
+        }
+    );
 }

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        />
+
+        <!-- css -->
+        <link rel="stylesheet" href="assets/css/font.css" />
+        <link rel="stylesheet" href="assets/css/common.css" />
+        <link rel="stylesheet" href="assets/css/animation.css" />
+        <link rel="stylesheet" href="assets/css/find.css" />
+        <link rel="stylesheet" href="assets/css/common_ui.css" />
+
+        <title>Find</title>
+    </head>
+    <body>
+        <div class="container sub">
+            <!-- sub header -->
+            <div class="sub_header">
+                <a href="/">
+                    <img src="assets/images/left_black.svg" alt="뒤로가기" />
+                </a>
+            </div>
+            <!-- sub header -->
+
+            <!-- tab wrapper -->
+            <div class="tab_wrapper">
+                <!-- tab header -->
+                <div class="tab_header">
+                    <a href="#tab_01" class="tab_btn">
+                        <span>아이디 찾기</span>
+                    </a>
+                    <a href="#tab_02" class="tab_btn">
+                        <span>비밀번호 찾기</span>
+                    </a>
+                </div>
+                <!-- tab header -->
+
+                <!-- tab content -->
+                <div class="tab_content">
+                    <div class="tab_item" id="tab_01">
+                        <!-- sub wrapper -->
+                        <div class="sub_wrapper find_box_wrapper">
+                            <h2>아이디 찾기</h2>
+
+                            <!-- find box -->
+                            <div class="find_box">
+                                <div class="img_box">
+                                    <img
+                                        src="assets/images/user.svg"
+                                        alt="아이디 찾기"
+                                        id="imgFindId"
+                                    />
+                                    <img
+                                        src="assets/images/user_search.svg"
+                                        alt="아이디 찾기 결과"
+                                        id="imgFindIdResult"
+                                        hidden
+                                    />
+                                </div>
+
+                                <div
+                                    class="message_box"
+                                    id="findIdMessage"
+                                    hidden
+                                >
+                                    회원님의 휴대전화로 가입된 아이디가
+                                    있습니다.
+                                </div>
+
+                                <div
+                                    class="user_info"
+                                    id="findIdUserInfo"
+                                    hidden
+                                >
+                                    <p class="user_email" id="userEmail">
+                                        email@email.e
+                                    </p>
+                                    <p class="regist_date">
+                                        <span>본인인증</span>
+                                        <span id="registDate"
+                                            >1999.01.02 가입</span
+                                        >
+                                    </p>
+                                </div>
+
+                                <button
+                                    type="button"
+                                    class="block_btn"
+                                    id="btnFindId"
+                                >
+                                    본인 인증하기
+                                </button>
+                                <a
+                                    href="login.html"
+                                    class="block_btn"
+                                    id="btnFindIdLogin"
+                                    hidden
+                                >
+                                    로그인
+                                </a>
+                            </div>
+                            <!-- find box -->
+
+                            <!-- btn group -->
+                            <div class="find_login_box">
+                                <a href="login.html" class="btn_login">
+                                    로그인
+                                </a>
+                                <a href="regist.html" class="btn_regist">
+                                    회원가입
+                                </a>
+                                <button type="button" id="btnFind" hidden>
+                                    비밀번호 찾기
+                                </button>
+                            </div>
+                            <!-- btn group -->
+                        </div>
+                        <!-- sub wrapper -->
+                    </div>
+                    <div class="tab_item" id="tab_02">
+                        <!-- sub wrapper -->
+                        <div class="sub_wrapper find_box_wrapper">
+                            <h2 id="findPasswordTitle">비밀번호 찾기</h2>
+
+                            <!-- find box -->
+                            <div class="find_box" id="passwordFindBox">
+                                <div class="img_box">
+                                    <img
+                                        src="assets/images/password_search.svg"
+                                        alt="비밀번호 찾기"
+                                    />
+                                </div>
+
+                                <button
+                                    type="button"
+                                    class="block_btn"
+                                    id="btnFindPassword"
+                                >
+                                    본인 인증하기
+                                </button>
+                            </div>
+                            <!-- find box -->
+
+                            <!-- change password -->
+                            <div class="change_password_box" hidden>
+                                <div class="input_box">
+                                    <div class="form_group">
+                                        <label for="inputFindPassword"
+                                            >비밀번호</label
+                                        >
+                                        <input
+                                            class="form_input regist_input require"
+                                            placeholder="비밀번호를 입력해주세요."
+                                            type="password"
+                                            name="inputFindPassword"
+                                            id="inputFindPassword"
+                                        />
+                                        <span></span>
+                                        <button
+                                            type="button"
+                                            class="input_icon show_password show"
+                                        >
+                                            <img
+                                                class="show"
+                                                src="assets/images/show_password.svg"
+                                                alt="비밀번호 보이기"
+                                            />
+                                            <img
+                                                class="hide"
+                                                src="assets/images/hide_password.svg"
+                                                alt="비밀번호 감추기"
+                                            />
+                                        </button>
+                                        <div class="error_message"></div>
+                                    </div>
+                                    <div class="form_group">
+                                        <label for="inputFindPasswordConfirm"
+                                            >비밀번호 확인</label
+                                        >
+                                        <input
+                                            class="form_input regist_input require"
+                                            placeholder="위와 동일한 비밀번호를 입력해주세요."
+                                            type="password"
+                                            name="inputFindPasswordConfirm"
+                                            id="inputFindPasswordConfirm"
+                                        />
+                                        <span></span>
+                                        <button
+                                            type="button"
+                                            class="input_icon show_password show"
+                                        >
+                                            <img
+                                                class="show"
+                                                src="assets/images/show_password.svg"
+                                                alt="비밀번호 보이기"
+                                            />
+                                            <img
+                                                class="hide"
+                                                src="assets/images/hide_password.svg"
+                                                alt="비밀번호 감추기"
+                                            />
+                                        </button>
+                                        <div class="error_message"></div>
+                                    </div>
+                                </div>
+
+                                <button
+                                    type="button"
+                                    class="block_btn"
+                                    id="btnChangePassword"
+                                >
+                                    비밀번호 변경
+                                </button>
+                            </div>
+                            <!-- change password -->
+
+                            <!-- btn group -->
+                            <div class="find_login_box">
+                                <a href="login.html" class="btn_login">
+                                    로그인
+                                </a>
+                                <a href="regist.html" class="btn_regist">
+                                    회원가입
+                                </a>
+                            </div>
+                            <!-- btn group -->
+                        </div>
+                        <!-- sub wrapper -->
+                    </div>
+                </div>
+                <!-- tab content -->
+
+                <!-- tab modal -->
+                <div class="tab_modal">
+                    <div class="img_box">
+                        <img
+                            src="assets/images/password_result.svg"
+                            alt="비밀번호 변경 완료"
+                        />
+                    </div>
+
+                    <p>비밀번호 변경이 완료되었습니다.</p>
+
+                    <a href="login.html" class="block_btn"> 로그인 </a>
+                </div>
+                <!-- tab modal -->
+            </div>
+            <!-- tab wrapper -->
+        </div>
+
+        <!-- jquery -->
+        <script type="text/javascript" src="assets/js/jQuery.js"></script>
+
+        <!-- common ui -->
+        <script type="text/javascript" src="assets/js/common_ui.js"></script>
+        <!-- common -->
+        <script type="text/javascript" src="assets/js/common.js"></script>
+    </body>
+</html>

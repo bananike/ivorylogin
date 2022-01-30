@@ -10,6 +10,8 @@
 
         <!-- css -->
         <link rel="stylesheet" href="assets/css/font.css" />
+        <link rel="stylesheet" href="assets/css/common.css" />
+        <link rel="stylesheet" href="assets/css/animation.css" />
         <link rel="stylesheet" href="assets/css/login.css" />
         <link rel="stylesheet" href="assets/css/common_ui.css" />
 
@@ -71,19 +73,27 @@
                     <!-- login btn group -->
                     <div class="btn_box_login">
                         <button type="button" class="btn_login">로그인</button>
-                        <button type="button" class="btn_join">회원가입</button>
+                        <a href="regist.html" class="btn_join">회원가입</a>
                     </div>
                     <!-- login btn group -->
 
                     <!-- find group -->
-                    <div class="find_box">
+                    <div class="login_find_box">
                         <div class="find_btn_group">
-                            <button type="button" class="btn_findId">
+                            <a
+                                href="find.html#tab_01"
+                                class="find_btn"
+                                id="btnMovefindId"
+                            >
                                 아이디 찾기
-                            </button>
-                            <button type="button" class="btn_findPassword">
+                            </a>
+                            <a
+                                href="find.html#tab_02"
+                                class="find_btn"
+                                id="btnMovefindPassword"
+                            >
                                 비밀번호 찾기
-                            </button>
+                            </a>
                         </div>
                         <a href="/" class="more_help"
                             ><img

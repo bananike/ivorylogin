@@ -1,0 +1,148 @@
+.tab_wrapper {
+    margin: 0 fn_calc($v: 40);
+    border-radius: fn_calc($v: 30);
+    position: relative;
+    overflow: hidden;
+
+    &.tab_01 {
+        .tab_header {
+            &:before {
+                animation: tabMenuSlideRight 0.3s forwards;
+            }
+        }
+    }
+    &.tab_02 {
+        .tab_header {
+            &:before {
+                animation: tabMenuSlideLeft 0.3s forwards;
+            }
+        }
+    }
+}
+
+.tab_header {
+    display: flex;
+    position: relative;
+    background-color: $color_lightdark;
+    overflow: hidden;
+    transform-origin: left;
+    transform: translateX(0);
+
+    &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: $color_light;
+        transform-origin: left;
+    }
+}
+
+.tab_header .tab_btn {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: fn_calc($v: 28) 0;
+    font-weight: 700;
+    font-size: fn_calc($v: 20);
+    line-height: fn_calc($v: 20);
+    letter-spacing: fn_calc($v: -1.2);
+    color: $color_light;
+    transition: color 0.3s;
+
+    &.active {
+        pointer-events: none;
+    }
+
+    span {
+        position: relative;
+        z-index: 1;
+    }
+
+    &.active {
+        color: $color_dark;
+        transition: color 0.3s;
+    }
+}
+
+.tab_content {
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+
+    &.active_tab_01 .tab_item:first-child {
+        animation: tabContentSlideRight 0.3s forwards;
+    }
+    &.active_tab_02 .tab_item:first-child {
+        animation: tabContentSlideLeft 0.3s forwards;
+    }
+}
+
+.tab_content .tab_item {
+    min-width: 100%;
+    margin-left: 0;
+    transition: margin-left 0.3s;
+}
+
+.tab_content .tab_item .sub_wrapper {
+    border-radius: 0;
+    margin: 0;
+    min-height: calc(100vh - #{fn_calc($v: 226)});
+}
+
+.tab_modal {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    padding: fn_calc($v: 45);
+    background-color: $color_light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .img_box {
+        width: fn_calc($v: 130);
+        height: fn_calc($v: 130);
+        img {
+            @include objectfit;
+        }
+    }
+
+    p {
+        font-weight: 500;
+        margin-top: fn_calc($v: 60);
+        font-size: fn_calc($v: 23);
+        line-height: fn_calc($v: 23);
+        letter-spacing: fn_calc($v: -1.38);
+    }
+
+    .block_btn {
+        margin-top: fn_calc($v: 60);
+    }
+}
+
+@media (min-width: $media_base) {
+    .tab_wrapper {
+        margin: 0 40px;
+        border-radius: 30px;
+    }
+
+    .tab_header .tab_btn {
+        padding: 28px 0;
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: -1.2px;
+    }
+
+    .tab_content .tab_item .sub_wrapper {
+        min-height: calc(100vh - #{226px});
+    }
+}

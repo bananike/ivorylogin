@@ -1,5 +1,4 @@
 @import 'variable';
-@import 'common';
 .container.login {
     background: url('#{$base_url}bg_login.png') no-repeat 100%;
     background-size: cover;
@@ -18,7 +17,7 @@
 
     @import 'login_box';
     @import 'btn_box_login';
-    @import 'find_box';
+    @import 'login_find_box';
 }
 
 @media (min-width: $media_base) {

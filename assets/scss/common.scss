@@ -1,3 +1,4 @@
+@import 'variable';
 * {
     padding: 0;
     margin: 0;
@@ -7,7 +8,7 @@
     // outline: 1px solid rgba(255, 0, 0, 0.1);
 }
 body {
-    background-color: #000;
+    background-color: $color_dark;
 }
 input,
 button {
@@ -26,11 +27,43 @@ a {
 img {
     display: block;
 }
+.hidden,
+*[hidden] {
+    display: none !important;
+}
 
 .container {
     max-width: $media_base;
     margin: 0 auto;
     min-height: 100vh;
+}
+
+.container.sub {
+    background: url('#{$base_url}bg_sub.png') no-repeat 100%;
+    background-size: cover;
+    padding-bottom: fn_calc($v: 40);
+}
+
+.sub_header {
+    position: relative;
+    width: 100%;
+    padding: fn_calc($v: 50) fn_calc($v: 40) fn_calc($v: 32);
+
+    a {
+        display: block;
+        position: relative;
+        width: fn_calc($v: 20);
+        height: fn_calc($v: 28);
+        img {
+            @include objectfit;
+        }
+    }
+}
+.sub_wrapper {
+    margin: 0 fn_calc($v: 40);
+    padding: fn_calc($v: 48) fn_calc($v: 45);
+    border-radius: fn_calc($v: 30);
+    background-color: $color_light;
 }
 .form_group {
     position: relative;
@@ -243,5 +276,24 @@ img {
                 height: 16.5px;
             }
         }
+    }
+
+    .container {
+        padding-bottom: 40px;
+    }
+
+    .sub_header {
+        padding: 50px 40px 32px;
+
+        a {
+            width: 20px;
+            height: 28px;
+        }
+    }
+
+    .sub_wrapper {
+        margin: 0 40px;
+        padding: 48px 45px;
+        border-radius: 30px;
     }
 }

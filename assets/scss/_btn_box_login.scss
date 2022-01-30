@@ -3,7 +3,8 @@
     display: flex;
     flex-direction: column;
 
-    button {
+    button,
+    a {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -34,7 +35,8 @@
     .btn_box_login {
         margin-top: 40px;
 
-        button {
+        button,
+        a {
             height: 67px;
             font-size: 20px;
             line-height: 20px;
