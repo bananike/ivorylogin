@@ -41,13 +41,13 @@
     transform: translateY(100%); } }
 @keyframes tabMenuSlideLeft {
   0% {
-    transform: translateX(0); }
+    left: 0%; }
   100% {
-    transform: translateX(100%); } }
+    left: 50%; } }
 @keyframes tabMenuSlideRight {
   0% {
-    transform: translateX(100%); }
+    left: 50%; }
   100% {
-    transform: translateX(0); } }
+    left: 0%; } }
 
 /*# sourceMappingURL=animation.css.map */

@@ -7,14 +7,16 @@
     &.tab_01 {
         .tab_header {
             &:before {
-                animation: tabMenuSlideRight 0.3s forwards;
+                left: 0%;
+                // animation: tabMenuSlideRight 0.3s forwards;
             }
         }
     }
     &.tab_02 {
         .tab_header {
             &:before {
-                animation: tabMenuSlideLeft 0.3s forwards;
+                left: 50%;
+                // animation: tabMenuSlideLeft 0.3s forwards;
             }
         }
     }
@@ -25,8 +27,6 @@
     position: relative;
     background-color: $color_lightdark;
     overflow: hidden;
-    transform-origin: left;
-    transform: translateX(0);
 
     &:before {
         display: block;
@@ -37,7 +37,7 @@
         left: 0;
         top: 0;
         background-color: $color_light;
-        transform-origin: left;
+        // transform-origin: left;
     }
 }
 
@@ -55,19 +55,22 @@
     color: $color_light;
     transition: color 0.3s;
 
-    &.active {
-        pointer-events: none;
-    }
-
     span {
         position: relative;
-        z-index: 1;
     }
 
     &.active {
+        pointer-events: none;
         color: $color_dark;
         transition: color 0.3s;
     }
+
+    // &:first-child {
+    //     border-top-left-radius: fn_calc($v: 30);
+    // }
+    // &:last-child {
+    //     border-top-right-radius: fn_calc($v: 30);
+    // }
 }
 
 .tab_content {
@@ -107,6 +110,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-top-left-radius: fn_calc($v: 30);
+    border-top-right-radius: fn_calc($v: 30);
 
     .img_box {
         width: fn_calc($v: 130);
@@ -135,11 +140,23 @@
         border-radius: 30px;
     }
 
+    // .tab_header {
+    //     border-top-left-radius: 30px;
+    //     border-top-right-radius: 30px;
+    // }
+
     .tab_header .tab_btn {
         padding: 28px 0;
         font-size: 20px;
         line-height: 20px;
         letter-spacing: -1.2px;
+
+        // &:first-child {
+        //     border-top-left-radius: 30px;
+        // }
+        // &:last-child {
+        //     border-top-right-radius: 30px;
+        // }
     }
 
     .tab_content .tab_item .sub_wrapper {
@@ -148,6 +165,8 @@
 
     .tab_modal {
         padding: 45px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
 
         .img_box {
             width: 130px;
