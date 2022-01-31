@@ -1,0 +1,118 @@
+@font-face {
+  font-family: mgothic;
+  src: url("../fonts/mgothic010.ttf");
+  font-weight: 100;
+  font-style: normal; }
+@font-face {
+  font-family: mgothic;
+  src: url("../fonts/mgothic020.ttf");
+  font-weight: 200;
+  font-style: normal; }
+@font-face {
+  font-family: mgothic;
+  src: url("../fonts/mgothic030.ttf");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: mgothic;
+  src: url("../fonts/mgothic040.ttf");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: mgothic;
+  src: url("../fonts/mgothic050.ttf");
+  font-weight: 500;
+  font-style: normal; }
+@font-face {
+  font-family: mgothic;
+  src: url("../fonts/mgothic060.ttf");
+  font-weight: 600;
+  font-style: normal; }
+@font-face {
+  font-family: mgothic;
+  src: url("../fonts/mgothic070.ttf");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: mgothic;
+  src: url("../fonts/mgothic080.ttf");
+  font-weight: 800;
+  font-style: normal; }
+@font-face {
+  font-family: mgothic;
+  src: url("../fonts/mgothic090.ttf");
+  font-weight: 900;
+  font-style: normal; }
+@font-face {
+  font-family: mgothic;
+  src: url("../fonts/mgothic100.ttf");
+  font-weight: 1000;
+  font-style: normal; }
+.complete {
+  background: url("../images/bg_complete.png") no-repeat 100%;
+  background-size: cover;
+  padding: calc(100vw * (100/640)) calc(100vw * (60/640));
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.welcome_box {
+  margin-top: calc(100vw * (210/640)); }
+  .welcome_box .text_1 {
+    font-weight: 500;
+    font-size: calc(100vw * (55/640));
+    line-height: calc(100vw * (70/640));
+    letter-spacing: calc(100vw * (-3.3/640));
+    color: #fff; }
+  .welcome_box .text_2 {
+    margin-top: calc(100vw * (20/640));
+    font-weight: 300;
+    font-size: calc(100vw * (30/640));
+    line-height: calc(100vw * (50/640));
+    letter-spacing: calc(100vw * (-1.8/640));
+    color: #fff; }
+  .welcome_box .logo {
+    margin-top: calc(100vw * (60/640)); }
+
+.btn_start {
+  margin-top: calc(100vw * (80/640));
+  height: calc(100vw * (85/640));
+  border-radius: calc(100vw * (30/640));
+  border: 3px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: calc(100vw * (30/640));
+  line-height: calc(100vw * (50/640));
+  letter-spacing: calc(100vw * (-1.8/640));
+  color: #fff; }
+
+@media (min-width: 640px) {
+  .complete {
+    padding: 100px 60px; }
+
+  .welcome_box {
+    margin-top: 210px; }
+    .welcome_box .text_1 {
+      font-size: 55px;
+      line-height: 70px;
+      letter-spacing: -3.3px; }
+    .welcome_box .text_2 {
+      margin-top: 20px;
+      font-size: 30px;
+      line-height: 50px;
+      letter-spacing: -1.8px; }
+    .welcome_box .logo {
+      margin-top: 60px; }
+
+  .btn_start {
+    margin-top: 80px;
+    height: 85px;
+    border-radius: 30px;
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: -1.8px; } }
+
+/*# sourceMappingURL=complete.css.map */

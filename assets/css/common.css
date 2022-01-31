@@ -29,6 +29,16 @@ img {
 *[hidden] {
   display: none !important; }
 
+.logo {
+  position: relative;
+  width: calc(100vw * (152/640));
+  height: calc(100vw * (62/640));
+  margin-top: calc(100vw * (40/640)); }
+  .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
 .container {
   max-width: 640px;
   margin: 0 auto;
@@ -232,6 +242,11 @@ img {
       .form_checkbox .fake_box:after {
         width: 21.8px;
         height: 16.5px; }
+
+  .logo {
+    width: 152px;
+    height: 62px;
+    margin-top: 40px; }
 
   .container {
     padding-bottom: 40px; }

@@ -1,0 +1,88 @@
+@import 'variable';
+@import 'font';
+
+.complete {
+    background: url('#{$base_url}bg_complete.png') no-repeat 100%;
+    background-size: cover;
+    padding: fn_calc($v: 100) fn_calc($v: 60);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.welcome_box {
+    margin-top: fn_calc($v: 210);
+
+    .text_1 {
+        font-weight: 500;
+        font-size: fn_calc($v: 55);
+        line-height: fn_calc($v: 70);
+        letter-spacing: fn_calc($v: -3.3);
+        color: $color-light;
+    }
+
+    .text_2 {
+        margin-top: fn_calc($v: 20);
+        font-weight: 300;
+        font-size: fn_calc($v: 30);
+        line-height: fn_calc($v: 50);
+        letter-spacing: fn_calc($v: -1.8);
+        color: $color-light;
+    }
+
+    .logo {
+        margin-top: fn_calc($v: 60);
+    }
+}
+
+.btn_start {
+    margin-top: fn_calc($v: 80);
+    height: fn_calc($v: 85);
+    border-radius: fn_calc($v: 30);
+    border: 3px solid $color_light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: fn_calc($v: 30);
+    line-height: fn_calc($v: 50);
+    letter-spacing: fn_calc($v: -1.8);
+    color: $color-light;
+}
+
+@media (min-width: $media_base) {
+    .complete {
+        padding: 100px 60px;
+    }
+
+    .welcome_box {
+        margin-top: 210px;
+
+        .text_1 {
+            font-size: 55px;
+            line-height: 70px;
+            letter-spacing: -3.3px;
+        }
+
+        .text_2 {
+            margin-top: 20px;
+            font-size: 30px;
+            line-height: 50px;
+            letter-spacing: -1.8px;
+        }
+
+        .logo {
+            margin-top: 60px;
+        }
+    }
+
+    .btn_start {
+        margin-top: 80px;
+        height: 85px;
+        border-radius: 30px;
+        font-size: 30px;
+        line-height: 50px;
+        letter-spacing: -1.8px;
+    }
+}

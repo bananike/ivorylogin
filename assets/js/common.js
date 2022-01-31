@@ -10,6 +10,7 @@ $(document).ready(function () {
     checkChangePasswordBtn();
     previewImageUpload();
     selectCharacter();
+    setNickName();
 
     // test 인증중복 모달
     // onCheckDuplication();
@@ -453,4 +454,10 @@ function selectCharacter() {
 
         closeCharacter();
     });
+}
+
+// 020. 가입완료 닉네임 설정
+function setNickName() {
+    var nickName = '김또띠';
+    $('#userName').html(nickName);
 }

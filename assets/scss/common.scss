@@ -32,6 +32,16 @@ img {
     display: none !important;
 }
 
+.logo {
+    position: relative;
+    width: fn_calc($v: 152);
+    height: fn_calc($v: 62);
+    margin-top: fn_calc($v: 40);
+    img {
+        @include objectfit;
+    }
+}
+
 .container {
     max-width: $media_base;
     margin: 0 auto;
@@ -296,6 +306,12 @@ img {
                 height: 16.5px;
             }
         }
+    }
+
+    .logo {
+        width: 152px;
+        height: 62px;
+        margin-top: 40px;
     }
 
     .container {
