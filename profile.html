@@ -26,6 +26,145 @@
                 </a>
             </div>
             <!-- sub header -->
+
+            <!-- sub wrapper -->
+            <div class="sub_wrapper profile_wrapper">
+                <h2>프로필 설정</h2>
+
+                <div class="profile_box">
+                    <div class="profile_content">
+                        <div class="text_box">
+                            아이보리에서 사용하실<br /><span>닉네임</span>을
+                            입력해주세요.
+                        </div>
+
+                        <div class="img_box">
+                            <img
+                                src="assets/images/profile_base.svg"
+                                alt="프로필 이미지"
+                                id="previewImage"
+                            />
+                        </div>
+
+                        <div class="btn_box">
+                            <div class="image_uploader button">
+                                <input type="file" id="profileImageUploader" />
+                                <label type="button" for="profileImageUploader">
+                                    <img
+                                        src="assets/images/icon_camera.svg"
+                                        alt="사진 올리기"
+                                    />
+                                    <span>사진 올리기</span>
+                                </label>
+                            </div>
+                            <button type="button" id="profileSelectCharacter">
+                                <img
+                                    src="assets/images/icon_character.svg"
+                                    alt="캐릭터 선택하기"
+                                />
+                                <span>캐릭터 선택하기</span>
+                            </button>
+                        </div>
+
+                        <div class="form_group profile_input_box">
+                            <input
+                                class="form_input"
+                                placeholder="닉네임을 입력해주세요.(2~10자)"
+                                type="text"
+                                name="nickname"
+                                id="nickname"
+                            />
+                            <span></span>
+                            <button type="button" class="input_icon delete">
+                                <img
+                                    src="assets/images/delete_black.svg"
+                                    alt="입력값 삭제"
+                                />
+                            </button>
+                            <div class="error_message"></div>
+                        </div>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="block_btn"
+                        id="profileComplete"
+                        disabled="true"
+                    >
+                        프로필을 완성해주세요
+                    </button>
+                </div>
+            </div>
+            <!-- sub wrapper -->
+
+            <!-- profile modal -->
+            <div class="profile_modal" id="characterSelecter">
+                <div class="character_container">
+                    <button type="button" class="close" id="closeCharacter">
+                        <img src="assets/images/delete_black.svg" alt="닫기" />
+                    </button>
+                    <div class="character_preview">
+                        <img
+                            src="assets/images/character_01.svg"
+                            alt="캐릭터"
+                            id="characterPreview"
+                        />
+                    </div>
+                    <ul class="character_list" id="characterList">
+                        <li>
+                            <button type="button" class="active">
+                                <img
+                                    src="assets/images/character_01.svg"
+                                    alt="캐릭터 01"
+                                />
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <img
+                                    src="assets/images/character_02.svg"
+                                    alt="캐릭터 02"
+                                />
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <img
+                                    src="assets/images/character_03.svg"
+                                    alt="캐릭터 03"
+                                />
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <img
+                                    src="assets/images/character_04.svg"
+                                    alt="캐릭터 04"
+                                />
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <img
+                                    src="assets/images/character_05.svg"
+                                    alt="캐릭터 05"
+                                />
+                            </button>
+                        </li>
+                    </ul>
+
+                    <button
+                        type="button"
+                        class="block_btn"
+                        id="selectCharacter"
+                    >
+                        캐릭터 선택하기
+                    </button>
+                </div>
+
+                <div class="back"></div>
+            </div>
+            <!-- profile modal -->
         </div>
 
         <!-- jquery -->

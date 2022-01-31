@@ -64,6 +64,13 @@ img {
     padding: fn_calc($v: 48) fn_calc($v: 45);
     border-radius: fn_calc($v: 30);
     background-color: $color_light;
+
+    h2 {
+        font-weight: 700;
+        font-size: fn_calc($v: 40);
+        line-height: fn_calc($v: 55);
+        letter-spacing: fn_calc($v: -2.4);
+    }
 }
 .form_group {
     position: relative;
@@ -209,6 +216,19 @@ img {
     }
 }
 
+.image_uploader {
+    input[type='file'] {
+        display: none;
+    }
+    label {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 @media (min-width: $media_base) {
     .form_group {
         label {
@@ -295,5 +315,11 @@ img {
         margin: 0 40px;
         padding: 48px 45px;
         border-radius: 30px;
+
+        h2 {
+            font-size: 40px;
+            line-height: 55px;
+            letter-spacing: -2.4px;
+        }
     }
 }

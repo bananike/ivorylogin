@@ -6,13 +6,6 @@
     @import 'input_box';
     @import 'change_password_box';
 
-    h2 {
-        font-weight: 700;
-        font-size: fn_calc($v: 40);
-        line-height: fn_calc($v: 55);
-        letter-spacing: fn_calc($v: -2.4);
-    }
-
     .find_box {
         display: flex;
         flex-direction: column;
@@ -101,12 +94,6 @@
 
 @media (min-width: $media_base) {
     .find_box_wrapper {
-        h2 {
-            font-size: 40px;
-            line-height: 55px;
-            letter-spacing: -2.4px;
-        }
-
         .find_box {
             .img_box {
                 width: 130px;

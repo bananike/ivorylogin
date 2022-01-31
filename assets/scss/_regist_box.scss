@@ -1,12 +1,5 @@
 @import 'input_box';
 
-h2 {
-    font-weight: 700;
-    font-size: fn_calc($v: 40);
-    line-height: fn_calc($v: 55);
-    letter-spacing: fn_calc($v: -2.4);
-}
-
 .input_box {
     margin-top: fn_calc($v: 40);
 
@@ -59,12 +52,6 @@ h2 {
 }
 
 @media (min-width: $media_base) {
-    h2 {
-        font-size: 40px;
-        line-height: 55px;
-        letter-spacing: -2.4px;
-    }
-
     .input_box {
         margin-top: 40px;
 

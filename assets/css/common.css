@@ -58,6 +58,11 @@ img {
   padding: calc(100vw * (48/640)) calc(100vw * (45/640));
   border-radius: calc(100vw * (30/640));
   background-color: #fff; }
+  .sub_wrapper h2 {
+    font-weight: 700;
+    font-size: calc(100vw * (40/640));
+    line-height: calc(100vw * (55/640));
+    letter-spacing: calc(100vw * (-2.4/640)); }
 
 .form_group {
   position: relative; }
@@ -171,6 +176,15 @@ img {
     .form_checkbox input[type='checkbox']:checked ~ .fake_box:after {
       animation: scaleUpdown 0.3s ease-in-out forwards; }
 
+.image_uploader input[type='file'] {
+  display: none; }
+.image_uploader label {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center; }
+
 @media (min-width: 640px) {
   .form_group label {
     font-size: 30px;
@@ -231,6 +245,10 @@ img {
   .sub_wrapper {
     margin: 0 40px;
     padding: 48px 45px;
-    border-radius: 30px; } }
+    border-radius: 30px; }
+    .sub_wrapper h2 {
+      font-size: 40px;
+      line-height: 55px;
+      letter-spacing: -2.4px; } }
 
 /*# sourceMappingURL=common.css.map */

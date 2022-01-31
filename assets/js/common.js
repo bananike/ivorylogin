@@ -8,6 +8,8 @@ $(document).ready(function () {
     tabMenu();
     findAuthentication();
     checkChangePasswordBtn();
+    previewImageUpload();
+    selectCharacter();
 
     // test 인증중복 모달
     // onCheckDuplication();
@@ -352,6 +354,7 @@ function findPassWordChangeUI() {
     $('.change_password_box').prop('hidden', false);
     $('#inputFindPassword').focus();
 }
+
 // 016. 비밀번호 변경 버튼체크
 function checkChangePasswordBtn() {
     $(document).on('click', '#btnChangePassword', function () {
@@ -389,4 +392,65 @@ function checkChangePasswordBtn() {
             $('#inputFindPasswordConfirm').removeClass('error');
         }
     );
+}
+
+// 017. 이미지업로드 프리뷰
+function previewImageUpload() {
+    $(document).on('change', '#profileImageUploader', function (e) {
+        console.log(e.target.files);
+        if (e.target.files && e.target.files[0]) {
+            const reader = new FileReader();
+
+            reader.onload = (e) => {
+                var previewImage = $('#previewImage');
+                previewImage.attr('src', e.target.result);
+            };
+            reader.readAsDataURL(e.target.files[0]);
+        }
+    });
+}
+
+// 018. 프로필 캐릭터
+function selectCharacter() {
+    // 캐릭터 선택 모달 보이기
+    $(document).on('click', '#profileSelectCharacter', function () {
+        $('#characterSelecter').css('display', 'flex');
+        $('body').addClass('modal_on');
+    });
+
+    // 캐릭터 선택 모달 닫기
+    $(document).on(
+        'click',
+        '#closeCharacter, #characterSelecter .back',
+        function () {
+            closeCharacter();
+        }
+    );
+
+    function closeCharacter() {
+        $('#characterSelecter').addClass('closing');
+
+        setTimeout(function () {
+            $('#characterSelecter').css('display', 'none');
+            $('#characterSelecter').removeClass('closing');
+            $('body').removeClass('modal_on');
+        }, 300);
+    }
+
+    // 캐릭터 선택
+    $(document).on('click', '#characterList button', function (e) {
+        var src = $(this).find('img').attr('src');
+
+        $('#characterPreview').attr('src', src);
+        $('#characterList button').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    // 캐릭터 입력
+    $(document).on('click', '#selectCharacter', function () {
+        var src = $('#characterPreview').attr('src');
+        $('#previewImage').attr('src', src);
+
+        closeCharacter();
+    });
 }

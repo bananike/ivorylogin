@@ -1,0 +1,347 @@
+@import 'variable';
+@import 'font';
+@import 'input_box';
+
+.profile_box {
+    min-height: calc(100vh - #{fn_calc($v: 349)});
+    margin-top: fn_calc($v: 48);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .text_box {
+        font-weight: 300;
+        font-size: fn_calc($v: 30);
+        line-height: fn_calc($v: 45);
+        letter-spacing: fn_calc($v: -1.8);
+
+        span {
+            color: $color_primary;
+        }
+    }
+
+    .img_box {
+        width: fn_calc($v: 185);
+        height: fn_calc($v: 185);
+        border-radius: 50%;
+        border: 2px solid $color_lightdark;
+        margin: fn_calc($v: 90) auto 0;
+        overflow: hidden;
+
+        img {
+            @include objectfit;
+        }
+    }
+
+    .btn_box {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-top: fn_calc($v: 60);
+
+        button,
+        .button {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: fn_calc($v: 67);
+            border-radius: fn_calc($v: 30);
+
+            span {
+                font-weight: 500;
+                font-size: fn_calc($v: 20);
+                line-height: fn_calc($v: 20);
+                letter-spacing: fn_calc($v: -1.2);
+                margin-left: fn_calc($v: 5);
+                color: $color_light;
+            }
+        }
+
+        .button {
+            margin-right: fn_calc($v: 10);
+            background-color: $color_primary;
+
+            label {
+                flex: 1;
+                height: fn_calc($v: 67);
+            }
+
+            img {
+                width: fn_calc($v: 30);
+                height: fn_calc($v: 24);
+            }
+        }
+        button {
+            background-color: $color_dark;
+            img {
+                width: fn_calc($v: 26);
+                height: fn_calc($v: 26);
+            }
+        }
+    }
+
+    .profile_input_box {
+        .form_input {
+            margin-top: fn_calc($v: 48);
+            height: fn_calc($v: 90);
+            border: 1px solid #000;
+            border-radius: fn_calc($v: 30);
+            padding: fn_calc($v: 24);
+            display: flex;
+            align-items: center;
+        }
+
+        span {
+            display: none;
+        }
+
+        .input_icon {
+            bottom: fn_calc($v: 33);
+            right: fn_calc($v: 22);
+        }
+    }
+
+    .block_btn {
+        margin-top: fn_calc($v: 80);
+    }
+}
+
+.profile_modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: flex-end;
+    padding: fn_calc($v: 40);
+    overflow: hidden;
+    animation: bgToneDown 0.3s forwards;
+
+    &.closing {
+        animation: bgToneUp 0.3s forwards;
+        .character_container {
+            animation: offCharacterSelecter 0.3s forwards;
+        }
+    }
+
+    .character_container {
+        background-color: $color_light;
+        border-radius: fn_calc($v: 30);
+        width: 100%;
+        padding: fn_calc($v: 60) fn_calc($v: 45);
+        position: relative;
+        z-index: 1;
+        opacity: 0;
+        transform-origin: bottom;
+        animation: onCharacterSelecter 0.3s forwards;
+
+        .close {
+            position: absolute;
+            width: fn_calc($v: 32);
+            height: fn_calc($v: 32);
+            top: fn_calc($v: 40);
+            left: fn_calc($v: 40);
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .character_preview {
+            margin: fn_calc($v: 5) auto 0;
+            width: fn_calc($v: 185);
+            height: fn_calc($v: 185);
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid $color_lightdark;
+            img {
+                @include objectfit;
+            }
+        }
+
+        .character_list {
+            display: flex;
+            flex-direction: row;
+            width: calc(100% + #{fn_calc($v: 90)});
+            margin-top: fn_calc($v: 30);
+            margin-left: fn_calc($v: -45);
+            padding: fn_calc($v: 20) fn_calc($v: 45);
+            background-color: $color_beige;
+            overflow-x: auto;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            li:not(:last-child) {
+                margin-right: fn_calc($v: 10);
+            }
+
+            button {
+                width: fn_calc($v: 100);
+                height: fn_calc($v: 100);
+                border-radius: 50%;
+                position: relative;
+
+                img {
+                    @include objectfit;
+                }
+
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    content: '';
+                    width: calc(100% - #{fn_calc($v: 10)});
+                    height: calc(100% - #{fn_calc($v: 10)});
+                    border-radius: 50%;
+                    border: 5px solid transparent;
+                    transition: border 0.3s;
+                }
+
+                &.active:after {
+                    border: 5px solid $color_warning;
+                    transition: border 0.3s;
+                }
+            }
+        }
+
+        .block_btn {
+            margin-top: fn_calc($v: 49);
+        }
+
+        + .back {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media (min-width: $media_base) {
+    .profile_box {
+        min-height: calc(100vh - #{349px});
+        margin-top: 48px;
+
+        .text_box {
+            font-size: 30px;
+            line-height: 45px;
+            letter-spacing: -1.8px;
+        }
+
+        .img_box {
+            width: 185px;
+            height: 185px;
+            margin: 90px auto 0;
+        }
+
+        .btn_box {
+            margin-top: 60px;
+
+            button,
+            .button {
+                height: 67px;
+                border-radius: 30px;
+
+                span {
+                    font-size: 20px;
+                    line-height: 20px;
+                    letter-spacing: -1.2px;
+                    margin-left: 5px;
+                }
+            }
+
+            .button {
+                margin-right: 10px;
+
+                label {
+                    height: 67px;
+                }
+
+                img {
+                    width: 30px;
+                    height: 24px;
+                }
+            }
+            button {
+                img {
+                    width: 26px;
+                    height: 26px;
+                }
+            }
+        }
+
+        .profile_input_box {
+            .form_input {
+                margin-top: 48px;
+                height: 90px;
+                border-radius: 30px;
+                padding: 24px;
+            }
+
+            .input_icon {
+                bottom: 33px;
+                right: 22px;
+            }
+        }
+
+        .block_btn {
+            margin-top: 80px;
+        }
+    }
+
+    .profile_modal {
+        padding: 40px;
+
+        .character_container {
+            border-radius: 30px;
+            padding: 60px 45px;
+
+            .close {
+                width: 32px;
+                height: 32px;
+                top: 40px;
+                left: 40px;
+            }
+
+            .character_preview {
+                margin: 5px auto 0;
+                width: 185px;
+                height: 185px;
+            }
+
+            .character_list {
+                width: calc(100% + #{90px});
+                margin-top: 30px;
+                margin-left: -45px;
+                padding: 20px 45px;
+
+                li:not(:last-child) {
+                    margin-right: 10px;
+                }
+
+                button {
+                    width: 100px;
+                    height: 100px;
+
+                    &:after {
+                        width: calc(100% - #{10px});
+                        height: calc(100% - #{10px});
+                    }
+                }
+            }
+
+            .block_btn {
+                margin-top: 49px;
+            }
+        }
+    }
+}

@@ -234,11 +234,6 @@
       margin-top: 50px; }
     .find_box_wrapper .change_password_box .block_btn {
       margin-top: 60px; } }
-  .find_box_wrapper h2 {
-    font-weight: 700;
-    font-size: calc(100vw * (40/640));
-    line-height: calc(100vw * (55/640));
-    letter-spacing: calc(100vw * (-2.4/640)); }
   .find_box_wrapper .find_box {
     display: flex;
     flex-direction: column;
@@ -308,10 +303,6 @@
         margin-right: calc(100vw * (10/640)); }
 
 @media (min-width: 640px) {
-  .find_box_wrapper h2 {
-    font-size: 40px;
-    line-height: 55px;
-    letter-spacing: -2.4px; }
   .find_box_wrapper .find_box .img_box {
     width: 130px;
     height: 130px; }

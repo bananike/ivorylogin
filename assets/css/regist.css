@@ -205,11 +205,6 @@
     .regist_box .input_icon.show_password {
       width: 32px;
       height: 22px; } }
-.regist_box h2 {
-  font-weight: 700;
-  font-size: calc(100vw * (40/640));
-  line-height: calc(100vw * (55/640));
-  letter-spacing: calc(100vw * (-2.4/640)); }
 .regist_box .input_box {
   margin-top: calc(100vw * (40/640)); }
   .regist_box .input_box .form_group:not(:first-child) {
@@ -246,10 +241,6 @@
       .regist_box .email_list li span.email_address {
         color: #68c0b5; }
 @media (min-width: 640px) {
-  .regist_box h2 {
-    font-size: 40px;
-    line-height: 55px;
-    letter-spacing: -2.4px; }
   .regist_box .input_box {
     margin-top: 40px; }
     .regist_box .input_box .form_group:not(:first-child) {
