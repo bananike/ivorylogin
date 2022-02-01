@@ -100,6 +100,10 @@
         .input_icon {
             bottom: fn_calc($v: 33);
             right: fn_calc($v: 22);
+            &.duplication {
+                width: fn_calc($v: 35);
+                height: fn_calc($v: 26);
+            }
         }
     }
 
@@ -111,10 +115,12 @@
 .profile_modal {
     position: fixed;
     width: 100%;
+    max-width: $media_base;
     height: 100%;
     z-index: 9999;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     display: none;
     align-items: flex-end;
     padding: fn_calc($v: 40);
@@ -290,6 +296,10 @@
             .input_icon {
                 bottom: 33px;
                 right: 22px;
+                &.duplication {
+                    width: 35px;
+                    height: 26px;
+                }
             }
         }
 

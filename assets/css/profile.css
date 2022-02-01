@@ -174,16 +174,21 @@
   .profile_box .profile_input_box .input_icon {
     bottom: calc(100vw * (33/640));
     right: calc(100vw * (22/640)); }
+    .profile_box .profile_input_box .input_icon.duplication {
+      width: calc(100vw * (35/640));
+      height: calc(100vw * (26/640)); }
   .profile_box .block_btn {
     margin-top: calc(100vw * (80/640)); }
 
 .profile_modal {
   position: fixed;
   width: 100%;
+  max-width: 640px;
   height: 100%;
   z-index: 9999;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   display: none;
   align-items: flex-end;
   padding: calc(100vw * (40/640));
@@ -312,6 +317,9 @@
     .profile_box .profile_input_box .input_icon {
       bottom: 33px;
       right: 22px; }
+      .profile_box .profile_input_box .input_icon.duplication {
+        width: 35px;
+        height: 26px; }
     .profile_box .block_btn {
       margin-top: 80px; }
 
