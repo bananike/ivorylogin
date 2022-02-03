@@ -24,12 +24,24 @@
         width: fn_calc($v: 185);
         height: fn_calc($v: 185);
         border-radius: 50%;
-        border: 2px solid $color_lightdark;
         margin: fn_calc($v: 90) auto 0;
         overflow: hidden;
+        position: relative;
 
         img {
             @include objectfit;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: calc(100% - #{fn_calc($v: 4)});
+            height: calc(100% - #{fn_calc($v: 4)});
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            border: fn_calc($v: 2) solid $color_lightdark;
         }
     }
 
@@ -86,9 +98,10 @@
         .form_input {
             margin-top: fn_calc($v: 48);
             height: fn_calc($v: 90);
-            border: 1px solid #000;
+            border: 3px solid #000;
             border-radius: fn_calc($v: 30);
             padding: fn_calc($v: 24);
+            padding-right: fn_calc($v: 150);
             display: flex;
             align-items: center;
         }
@@ -99,11 +112,23 @@
 
         .input_icon {
             bottom: fn_calc($v: 33);
-            right: fn_calc($v: 22);
-            &.duplication {
-                width: fn_calc($v: 35);
-                height: fn_calc($v: 26);
-            }
+            right: fn_calc($v: 155);
+        }
+
+        .check_duplication {
+            position: absolute;
+            right: 0;
+            height: 100%;
+            top: 0;
+            background-color: $color_dark;
+            color: $color_light;
+            border-top-right-radius: fn_calc($v: 30);
+            border-bottom-right-radius: fn_calc($v: 30);
+            padding: 0 fn_calc($v: 20);
+            font-weight: 500;
+            font-size: fn_calc($v: 25);
+            line-height: fn_calc($v: 35);
+            letter-spacing: fn_calc($v: -0.5);
         }
     }
 
@@ -163,9 +188,20 @@
             height: fn_calc($v: 185);
             border-radius: 50%;
             overflow: hidden;
-            border: 2px solid $color_lightdark;
+            position: relative;
             img {
                 @include objectfit;
+            }
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: calc(100% - #{fn_calc($v: 6)});
+                height: calc(100% - #{fn_calc($v: 6)});
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+                border: fn_calc($v: 3) solid $color_lightdark;
             }
         }
 
@@ -205,12 +241,12 @@
                     width: calc(100% - #{fn_calc($v: 10)});
                     height: calc(100% - #{fn_calc($v: 10)});
                     border-radius: 50%;
-                    border: 5px solid transparent;
+                    border: fn_calc($v: 5) solid transparent;
                     transition: border 0.3s;
                 }
 
                 &.active:after {
-                    border: 5px solid $color_warning;
+                    border: fn_calc($v: 5) solid $color_warning;
                     transition: border 0.3s;
                 }
             }
@@ -247,6 +283,12 @@
             width: 185px;
             height: 185px;
             margin: 90px auto 0;
+
+            &:after {
+                width: calc(100% - 4px);
+                height: calc(100% - 4px);
+                border: 2px solid $color_lightdark;
+            }
         }
 
         .btn_box {
@@ -291,15 +333,20 @@
                 height: 90px;
                 border-radius: 30px;
                 padding: 24px;
+                padding-right: 150px;
             }
 
             .input_icon {
                 bottom: 33px;
-                right: 22px;
-                &.duplication {
-                    width: 35px;
-                    height: 26px;
-                }
+                right: 155px;
+            }
+            .check_duplication {
+                border-top-right-radius: 30px;
+                border-bottom-right-radius: 30px;
+                padding: 0 20px;
+                font-size: 25px;
+                line-height: 35px;
+                letter-spacing: -0.5px;
             }
         }
 
@@ -326,6 +373,12 @@
                 margin: 5px auto 0;
                 width: 185px;
                 height: 185px;
+
+                &:after {
+                    width: calc(100% - 6px);
+                    height: calc(100% - 6px);
+                    border: 3px solid $color_lightdark;
+                }
             }
 
             .character_list {
@@ -345,6 +398,11 @@
                     &:after {
                         width: calc(100% - #{10px});
                         height: calc(100% - #{10px});
+                        border: 5px solid transparent;
+                    }
+
+                    &.active:after {
+                        border: 5px solid $color_warning;
                     }
                 }
             }

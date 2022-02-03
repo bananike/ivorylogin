@@ -1,356 +1,97 @@
-@font-face {
-  font-family: mgothic;
-  src: url("../fonts/mgothic010.ttf");
-  font-weight: 100;
-  font-style: normal; }
-@font-face {
-  font-family: mgothic;
-  src: url("../fonts/mgothic020.ttf");
-  font-weight: 200;
-  font-style: normal; }
-@font-face {
-  font-family: mgothic;
-  src: url("../fonts/mgothic030.ttf");
-  font-weight: 300;
-  font-style: normal; }
-@font-face {
-  font-family: mgothic;
-  src: url("../fonts/mgothic040.ttf");
-  font-weight: 400;
-  font-style: normal; }
-@font-face {
-  font-family: mgothic;
-  src: url("../fonts/mgothic050.ttf");
-  font-weight: 500;
-  font-style: normal; }
-@font-face {
-  font-family: mgothic;
-  src: url("../fonts/mgothic060.ttf");
-  font-weight: 600;
-  font-style: normal; }
-@font-face {
-  font-family: mgothic;
-  src: url("../fonts/mgothic070.ttf");
-  font-weight: 700;
-  font-style: normal; }
-@font-face {
-  font-family: mgothic;
-  src: url("../fonts/mgothic080.ttf");
-  font-weight: 800;
-  font-style: normal; }
-@font-face {
-  font-family: mgothic;
-  src: url("../fonts/mgothic090.ttf");
-  font-weight: 900;
-  font-style: normal; }
-@font-face {
-  font-family: mgothic;
-  src: url("../fonts/mgothic100.ttf");
-  font-weight: 1000;
-  font-style: normal; }
-.input_box {
-  margin-top: calc(100vw * (65/640)); }
+@font-face { font-family: mgothic; src: url("../fonts/mgothic010.ttf"); font-weight: 100; font-style: normal; }
+@font-face { font-family: mgothic; src: url("../fonts/mgothic020.ttf"); font-weight: 200; font-style: normal; }
+@font-face { font-family: mgothic; src: url("../fonts/mgothic030.ttf"); font-weight: 300; font-style: normal; }
+@font-face { font-family: mgothic; src: url("../fonts/mgothic040.ttf"); font-weight: 400; font-style: normal; }
+@font-face { font-family: mgothic; src: url("../fonts/mgothic050.ttf"); font-weight: 500; font-style: normal; }
+@font-face { font-family: mgothic; src: url("../fonts/mgothic060.ttf"); font-weight: 600; font-style: normal; }
+@font-face { font-family: mgothic; src: url("../fonts/mgothic070.ttf"); font-weight: 700; font-style: normal; }
+@font-face { font-family: mgothic; src: url("../fonts/mgothic080.ttf"); font-weight: 800; font-style: normal; }
+@font-face { font-family: mgothic; src: url("../fonts/mgothic090.ttf"); font-weight: 900; font-style: normal; }
+@font-face { font-family: mgothic; src: url("../fonts/mgothic100.ttf"); font-weight: 1000; font-style: normal; }
+.input_box { margin-top: calc(100vw * (65/640)); }
 
-.form_input.login_input {
-  color: #fff; }
-  .form_input.login_input::placeholder {
-    color: #fff; }
-  .form_input.login_input + span {
-    background-color: #fff;
-    opacity: 0.5; }
-.form_input.regist_input {
-  color: #000; }
-  .form_input.regist_input::placeholder {
-    color: #d2d2d2; }
-  .form_input.regist_input ~ span {
-    background-color: #d2d2d2; }
-.form_input:focus ~ span:after {
-  width: 100%;
-  transition: width 0.3s ease-in-out; }
+.form_input.login_input { color: #fff; }
+.form_input.login_input::placeholder { color: #fff; }
+.form_input.login_input + span { background-color: #fff; opacity: 0.5; }
+.form_input.regist_input { color: #000; }
+.form_input.regist_input::placeholder { color: #d2d2d2; }
+.form_input.regist_input ~ span { background-color: #d2d2d2; }
+.form_input:focus ~ span:after { width: 100%; transition: width 0.3s ease-in-out; }
 
-.input_icon {
-  display: block;
-  position: absolute;
-  right: 0;
-  opacity: 0;
-  display: none;
-  bottom: calc(100vw * (22/640)); }
-  .input_icon.delete {
-    width: calc(100vw * (22/640));
-    height: calc(100vw * (22/640)); }
-  .input_icon.show_password {
-    width: calc(100vw * (32/640));
-    height: calc(100vw * (22/640)); }
-    .input_icon.show_password img {
-      display: none; }
-  .input_icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-fit: contain; }
+.input_icon { display: block; position: absolute; right: 0; opacity: 0; display: none; bottom: calc(100vw * (22/640)); }
+.input_icon.delete { width: calc(100vw * (22/640)); height: calc(100vw * (22/640)); }
+.input_icon.show_password { width: calc(100vw * (32/640)); height: calc(100vw * (22/640)); }
+.input_icon.show_password img { display: none; }
+.input_icon img { width: 100%; height: 100%; object-fit: cover; object-fit: contain; }
 
-@media (min-width: 640px) {
-  .input_box {
-    margin-top: 65px; }
+@media (min-width: 640px) { .input_box { margin-top: 65px; }
+  .input_icon { bottom: 22px; }
+  .input_icon.delete { width: 22px; height: 22px; }
+  .input_icon.show_password { width: 32px; height: 22px; } }
+.profile_box { min-height: calc(100vh - calc(100vw * (349/640))); margin-top: calc(100vw * (48/640)); display: flex; flex-direction: column; justify-content: space-between; }
+.profile_box .text_box { font-weight: 300; font-size: calc(100vw * (30/640)); line-height: calc(100vw * (45/640)); letter-spacing: calc(100vw * (-1.8/640)); }
+.profile_box .text_box span { color: #68c0b5; }
+.profile_box .img_box { width: calc(100vw * (185/640)); height: calc(100vw * (185/640)); border-radius: 50%; margin: calc(100vw * (90/640)) auto 0; overflow: hidden; position: relative; }
+.profile_box .img_box img { width: 100%; height: 100%; object-fit: cover; }
+.profile_box .img_box:after { content: ''; display: block; position: absolute; width: calc(100% - calc(100vw * (4/640))); height: calc(100% - calc(100vw * (4/640))); top: 0; left: 0; border-radius: 50%; border: calc(100vw * (2/640)) solid #a5a5a5; }
+.profile_box .btn_box { display: flex; flex-direction: row; flex-wrap: nowrap; margin-top: calc(100vw * (60/640)); }
+.profile_box .btn_box button, .profile_box .btn_box .button { position: relative; display: flex; justify-content: center; align-items: center; width: 50%; height: calc(100vw * (67/640)); border-radius: calc(100vw * (30/640)); }
+.profile_box .btn_box button span, .profile_box .btn_box .button span { font-weight: 500; font-size: calc(100vw * (20/640)); line-height: calc(100vw * (20/640)); letter-spacing: calc(100vw * (-1.2/640)); margin-left: calc(100vw * (5/640)); color: #fff; }
+.profile_box .btn_box .button { margin-right: calc(100vw * (10/640)); background-color: #68c0b5; }
+.profile_box .btn_box .button label { flex: 1; height: calc(100vw * (67/640)); }
+.profile_box .btn_box .button img { width: calc(100vw * (30/640)); height: calc(100vw * (24/640)); }
+.profile_box .btn_box button { background-color: #000; }
+.profile_box .btn_box button img { width: calc(100vw * (26/640)); height: calc(100vw * (26/640)); }
+.profile_box .profile_input_box .form_input { margin-top: calc(100vw * (48/640)); height: calc(100vw * (90/640)); border: 3px solid #000; border-radius: calc(100vw * (30/640)); padding: calc(100vw * (24/640)); padding-right: calc(100vw * (150/640)); display: flex; align-items: center; }
+.profile_box .profile_input_box span { display: none; }
+.profile_box .profile_input_box .input_icon { bottom: calc(100vw * (33/640)); right: calc(100vw * (155/640)); }
+.profile_box .profile_input_box .check_duplication { position: absolute; right: 0; height: 100%; top: 0; background-color: #000; color: #fff; border-top-right-radius: calc(100vw * (30/640)); border-bottom-right-radius: calc(100vw * (30/640)); padding: 0 calc(100vw * (20/640)); font-weight: 500; font-size: calc(100vw * (25/640)); line-height: calc(100vw * (35/640)); letter-spacing: calc(100vw * (-0.5/640)); }
+.profile_box .block_btn { margin-top: calc(100vw * (80/640)); }
 
-  .input_icon {
-    bottom: 22px; }
-    .input_icon.delete {
-      width: 22px;
-      height: 22px; }
-    .input_icon.show_password {
-      width: 32px;
-      height: 22px; } }
-.profile_box {
-  min-height: calc(100vh - calc(100vw * (349/640)));
-  margin-top: calc(100vw * (48/640));
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
-  .profile_box .text_box {
-    font-weight: 300;
-    font-size: calc(100vw * (30/640));
-    line-height: calc(100vw * (45/640));
-    letter-spacing: calc(100vw * (-1.8/640)); }
-    .profile_box .text_box span {
-      color: #68c0b5; }
-  .profile_box .img_box {
-    width: calc(100vw * (185/640));
-    height: calc(100vw * (185/640));
-    border-radius: 50%;
-    border: 2px solid #a5a5a5;
-    margin: calc(100vw * (90/640)) auto 0;
-    overflow: hidden; }
-    .profile_box .img_box img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
-  .profile_box .btn_box {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    margin-top: calc(100vw * (60/640)); }
-    .profile_box .btn_box button,
-    .profile_box .btn_box .button {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 50%;
-      height: calc(100vw * (67/640));
-      border-radius: calc(100vw * (30/640)); }
-      .profile_box .btn_box button span,
-      .profile_box .btn_box .button span {
-        font-weight: 500;
-        font-size: calc(100vw * (20/640));
-        line-height: calc(100vw * (20/640));
-        letter-spacing: calc(100vw * (-1.2/640));
-        margin-left: calc(100vw * (5/640));
-        color: #fff; }
-    .profile_box .btn_box .button {
-      margin-right: calc(100vw * (10/640));
-      background-color: #68c0b5; }
-      .profile_box .btn_box .button label {
-        flex: 1;
-        height: calc(100vw * (67/640)); }
-      .profile_box .btn_box .button img {
-        width: calc(100vw * (30/640));
-        height: calc(100vw * (24/640)); }
-    .profile_box .btn_box button {
-      background-color: #000; }
-      .profile_box .btn_box button img {
-        width: calc(100vw * (26/640));
-        height: calc(100vw * (26/640)); }
-  .profile_box .profile_input_box .form_input {
-    margin-top: calc(100vw * (48/640));
-    height: calc(100vw * (90/640));
-    border: 1px solid #000;
-    border-radius: calc(100vw * (30/640));
-    padding: calc(100vw * (24/640));
-    display: flex;
-    align-items: center; }
-  .profile_box .profile_input_box span {
-    display: none; }
-  .profile_box .profile_input_box .input_icon {
-    bottom: calc(100vw * (33/640));
-    right: calc(100vw * (22/640)); }
-    .profile_box .profile_input_box .input_icon.duplication {
-      width: calc(100vw * (35/640));
-      height: calc(100vw * (26/640)); }
-  .profile_box .block_btn {
-    margin-top: calc(100vw * (80/640)); }
+.profile_modal { position: fixed; width: 100%; max-width: 640px; height: 100%; z-index: 9999; top: 0; left: 50%; transform: translateX(-50%); display: none; align-items: flex-end; padding: calc(100vw * (40/640)); overflow: hidden; animation: bgToneDown 0.3s forwards; }
+.profile_modal.closing { animation: bgToneUp 0.3s forwards; }
+.profile_modal.closing .character_container { animation: offCharacterSelecter 0.3s forwards; }
+.profile_modal .character_container { background-color: #fff; border-radius: calc(100vw * (30/640)); width: 100%; padding: calc(100vw * (60/640)) calc(100vw * (45/640)); position: relative; z-index: 1; opacity: 0; transform-origin: bottom; animation: onCharacterSelecter 0.3s forwards; }
+.profile_modal .character_container .close { position: absolute; width: calc(100vw * (32/640)); height: calc(100vw * (32/640)); top: calc(100vw * (40/640)); left: calc(100vw * (40/640)); }
+.profile_modal .character_container .close img { width: 100%; height: 100%; }
+.profile_modal .character_container .character_preview { margin: calc(100vw * (5/640)) auto 0; width: calc(100vw * (185/640)); height: calc(100vw * (185/640)); border-radius: 50%; overflow: hidden; position: relative; }
+.profile_modal .character_container .character_preview img { width: 100%; height: 100%; object-fit: cover; }
+.profile_modal .character_container .character_preview:after { content: ''; display: block; position: absolute; width: calc(100% - calc(100vw * (6/640))); height: calc(100% - calc(100vw * (6/640))); top: 0; left: 0; border-radius: 50%; border: calc(100vw * (3/640)) solid #a5a5a5; }
+.profile_modal .character_container .character_list { display: flex; flex-direction: row; width: calc(100% + calc(100vw * (90/640))); margin-top: calc(100vw * (30/640)); margin-left: calc(100vw * (-45/640)); padding: calc(100vw * (20/640)) calc(100vw * (45/640)); background-color: #ececec; overflow-x: auto; }
+.profile_modal .character_container .character_list::-webkit-scrollbar { display: none; }
+.profile_modal .character_container .character_list li:not(:last-child) { margin-right: calc(100vw * (10/640)); }
+.profile_modal .character_container .character_list button { width: calc(100vw * (100/640)); height: calc(100vw * (100/640)); border-radius: 50%; position: relative; }
+.profile_modal .character_container .character_list button img { width: 100%; height: 100%; object-fit: cover; }
+.profile_modal .character_container .character_list button:after { position: absolute; top: 0; left: 0; display: block; content: ''; width: calc(100% - calc(100vw * (10/640))); height: calc(100% - calc(100vw * (10/640))); border-radius: 50%; border: calc(100vw * (5/640)) solid transparent; transition: border 0.3s; }
+.profile_modal .character_container .character_list button.active:after { border: calc(100vw * (5/640)) solid #fb8713; transition: border 0.3s; }
+.profile_modal .character_container .block_btn { margin-top: calc(100vw * (49/640)); }
+.profile_modal .character_container + .back { display: block; position: absolute; left: 0; top: 0; z-index: 0; width: 100%; height: 100%; }
 
-.profile_modal {
-  position: fixed;
-  width: 100%;
-  max-width: 640px;
-  height: 100%;
-  z-index: 9999;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: none;
-  align-items: flex-end;
-  padding: calc(100vw * (40/640));
-  overflow: hidden;
-  animation: bgToneDown 0.3s forwards; }
-  .profile_modal.closing {
-    animation: bgToneUp 0.3s forwards; }
-    .profile_modal.closing .character_container {
-      animation: offCharacterSelecter 0.3s forwards; }
-  .profile_modal .character_container {
-    background-color: #fff;
-    border-radius: calc(100vw * (30/640));
-    width: 100%;
-    padding: calc(100vw * (60/640)) calc(100vw * (45/640));
-    position: relative;
-    z-index: 1;
-    opacity: 0;
-    transform-origin: bottom;
-    animation: onCharacterSelecter 0.3s forwards; }
-    .profile_modal .character_container .close {
-      position: absolute;
-      width: calc(100vw * (32/640));
-      height: calc(100vw * (32/640));
-      top: calc(100vw * (40/640));
-      left: calc(100vw * (40/640)); }
-      .profile_modal .character_container .close img {
-        width: 100%;
-        height: 100%; }
-    .profile_modal .character_container .character_preview {
-      margin: calc(100vw * (5/640)) auto 0;
-      width: calc(100vw * (185/640));
-      height: calc(100vw * (185/640));
-      border-radius: 50%;
-      overflow: hidden;
-      border: 2px solid #a5a5a5; }
-      .profile_modal .character_container .character_preview img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; }
-    .profile_modal .character_container .character_list {
-      display: flex;
-      flex-direction: row;
-      width: calc(100% + calc(100vw * (90/640)));
-      margin-top: calc(100vw * (30/640));
-      margin-left: calc(100vw * (-45/640));
-      padding: calc(100vw * (20/640)) calc(100vw * (45/640));
-      background-color: #ececec;
-      overflow-x: auto; }
-      .profile_modal .character_container .character_list::-webkit-scrollbar {
-        display: none; }
-      .profile_modal .character_container .character_list li:not(:last-child) {
-        margin-right: calc(100vw * (10/640)); }
-      .profile_modal .character_container .character_list button {
-        width: calc(100vw * (100/640));
-        height: calc(100vw * (100/640));
-        border-radius: 50%;
-        position: relative; }
-        .profile_modal .character_container .character_list button img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover; }
-        .profile_modal .character_container .character_list button:after {
-          position: absolute;
-          top: 0;
-          left: 0;
-          display: block;
-          content: '';
-          width: calc(100% - calc(100vw * (10/640)));
-          height: calc(100% - calc(100vw * (10/640)));
-          border-radius: 50%;
-          border: 5px solid transparent;
-          transition: border 0.3s; }
-        .profile_modal .character_container .character_list button.active:after {
-          border: 5px solid #fb8713;
-          transition: border 0.3s; }
-    .profile_modal .character_container .block_btn {
-      margin-top: calc(100vw * (49/640)); }
-    .profile_modal .character_container + .back {
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      z-index: 0;
-      width: 100%;
-      height: 100%; }
-
-@media (min-width: 640px) {
-  .profile_box {
-    min-height: calc(100vh - 349px);
-    margin-top: 48px; }
-    .profile_box .text_box {
-      font-size: 30px;
-      line-height: 45px;
-      letter-spacing: -1.8px; }
-    .profile_box .img_box {
-      width: 185px;
-      height: 185px;
-      margin: 90px auto 0; }
-    .profile_box .btn_box {
-      margin-top: 60px; }
-      .profile_box .btn_box button,
-      .profile_box .btn_box .button {
-        height: 67px;
-        border-radius: 30px; }
-        .profile_box .btn_box button span,
-        .profile_box .btn_box .button span {
-          font-size: 20px;
-          line-height: 20px;
-          letter-spacing: -1.2px;
-          margin-left: 5px; }
-      .profile_box .btn_box .button {
-        margin-right: 10px; }
-        .profile_box .btn_box .button label {
-          height: 67px; }
-        .profile_box .btn_box .button img {
-          width: 30px;
-          height: 24px; }
-      .profile_box .btn_box button img {
-        width: 26px;
-        height: 26px; }
-    .profile_box .profile_input_box .form_input {
-      margin-top: 48px;
-      height: 90px;
-      border-radius: 30px;
-      padding: 24px; }
-    .profile_box .profile_input_box .input_icon {
-      bottom: 33px;
-      right: 22px; }
-      .profile_box .profile_input_box .input_icon.duplication {
-        width: 35px;
-        height: 26px; }
-    .profile_box .block_btn {
-      margin-top: 80px; }
-
-  .profile_modal {
-    padding: 40px; }
-    .profile_modal .character_container {
-      border-radius: 30px;
-      padding: 60px 45px; }
-      .profile_modal .character_container .close {
-        width: 32px;
-        height: 32px;
-        top: 40px;
-        left: 40px; }
-      .profile_modal .character_container .character_preview {
-        margin: 5px auto 0;
-        width: 185px;
-        height: 185px; }
-      .profile_modal .character_container .character_list {
-        width: calc(100% + 90px);
-        margin-top: 30px;
-        margin-left: -45px;
-        padding: 20px 45px; }
-        .profile_modal .character_container .character_list li:not(:last-child) {
-          margin-right: 10px; }
-        .profile_modal .character_container .character_list button {
-          width: 100px;
-          height: 100px; }
-          .profile_modal .character_container .character_list button:after {
-            width: calc(100% - 10px);
-            height: calc(100% - 10px); }
-      .profile_modal .character_container .block_btn {
-        margin-top: 49px; } }
+@media (min-width: 640px) { .profile_box { min-height: calc(100vh - 349px); margin-top: 48px; }
+  .profile_box .text_box { font-size: 30px; line-height: 45px; letter-spacing: -1.8px; }
+  .profile_box .img_box { width: 185px; height: 185px; margin: 90px auto 0; }
+  .profile_box .img_box:after { width: calc(100% - 4px); height: calc(100% - 4px); border: 2px solid #a5a5a5; }
+  .profile_box .btn_box { margin-top: 60px; }
+  .profile_box .btn_box button, .profile_box .btn_box .button { height: 67px; border-radius: 30px; }
+  .profile_box .btn_box button span, .profile_box .btn_box .button span { font-size: 20px; line-height: 20px; letter-spacing: -1.2px; margin-left: 5px; }
+  .profile_box .btn_box .button { margin-right: 10px; }
+  .profile_box .btn_box .button label { height: 67px; }
+  .profile_box .btn_box .button img { width: 30px; height: 24px; }
+  .profile_box .btn_box button img { width: 26px; height: 26px; }
+  .profile_box .profile_input_box .form_input { margin-top: 48px; height: 90px; border-radius: 30px; padding: 24px; padding-right: 150px; }
+  .profile_box .profile_input_box .input_icon { bottom: 33px; right: 155px; }
+  .profile_box .profile_input_box .check_duplication { border-top-right-radius: 30px; border-bottom-right-radius: 30px; padding: 0 20px; font-size: 25px; line-height: 35px; letter-spacing: -0.5px; }
+  .profile_box .block_btn { margin-top: 80px; }
+  .profile_modal { padding: 40px; }
+  .profile_modal .character_container { border-radius: 30px; padding: 60px 45px; }
+  .profile_modal .character_container .close { width: 32px; height: 32px; top: 40px; left: 40px; }
+  .profile_modal .character_container .character_preview { margin: 5px auto 0; width: 185px; height: 185px; }
+  .profile_modal .character_container .character_preview:after { width: calc(100% - 6px); height: calc(100% - 6px); border: 3px solid #a5a5a5; }
+  .profile_modal .character_container .character_list { width: calc(100% + 90px); margin-top: 30px; margin-left: -45px; padding: 20px 45px; }
+  .profile_modal .character_container .character_list li:not(:last-child) { margin-right: 10px; }
+  .profile_modal .character_container .character_list button { width: 100px; height: 100px; }
+  .profile_modal .character_container .character_list button:after { width: calc(100% - 10px); height: calc(100% - 10px); border: 5px solid transparent; }
+  .profile_modal .character_container .character_list button.active:after { border: 5px solid #fb8713; }
+  .profile_modal .character_container .block_btn { margin-top: 49px; } }
 
 /*# sourceMappingURL=profile.css.map */
