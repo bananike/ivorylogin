@@ -83,7 +83,7 @@
             letter-spacing: fn_calc($v: -1.2);
             color: $color_lightdark;
             border-radius: fn_calc($v: 30);
-            border: 3px solid $color_lightdark;
+            border: 2px solid $color_lightdark;
 
             &:first-child {
                 margin-right: fn_calc($v: 10);

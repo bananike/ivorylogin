@@ -16,6 +16,7 @@
         letter-spacing: fn_calc($v: -1.8);
 
         span {
+            font-weight: 500;
             color: $color_primary;
         }
     }
